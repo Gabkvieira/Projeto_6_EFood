@@ -4,9 +4,8 @@ import { cores } from '../../styles'
 export const HeaderBar = styled.header`
   padding: 24px;
   border-radius: 16px;
-  margin-bottom: 16px;
+  margin-bottom: 16 px;
   display: flex;
-  align-items: center;
   justify-content: space-between;
   height: 186px;
 
@@ -15,11 +14,6 @@ export const HeaderBar = styled.header`
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
-  }
-
-  div {
-    display: flex;
-    align-items: center;
   }
 `
 
@@ -39,6 +33,7 @@ export const LinkItem = styled.li`
 
   img {
     margin-left: -120px;
+    margin-top: -15px;
   }
 `
 

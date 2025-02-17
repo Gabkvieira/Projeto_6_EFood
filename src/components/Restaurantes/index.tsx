@@ -38,7 +38,9 @@ const Restaurantes = ({
     <Titulo>{title}</Titulo>
     <Descricao>{description}</Descricao>
     <Nota>{nota}</Nota>
-    <LogoEstrela>{logoEstrela}</LogoEstrela>
+    <LogoEstrela>
+      <img src={logoEstrela} alt="estrela" />
+    </LogoEstrela>
     <Botao>
       <Link to="/perfil">Saiba mais</Link>
     </Botao>

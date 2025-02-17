@@ -28,7 +28,6 @@ export const Infos = styled.div`
   position: absolute;
   top: 16px;
   right: 16px;
-  text-decoration: none;
 `
 export const Botao = styled.button`
   background-color: ${cores.textoTag};
@@ -36,8 +35,8 @@ export const Botao = styled.button`
   color: ${cores.fundoTag};
   font-size: 14px;
   font-weight: bold;
-  padding: 8px 16px;
   text-decoration: none;
   width: 100%;
   height: 24px;
+  align-itens: center;
 `

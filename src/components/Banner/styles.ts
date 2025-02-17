@@ -7,7 +7,6 @@ export const Imagem = styled.div`
   display: block;
   background-repeat: no-repeat;
   background-size: cover;
-  font-weight: bold;
 
   .container {
     position: relative;
@@ -18,15 +17,15 @@ export const Imagem = styled.div`
   }
 `
 export const Titulo = styled.h2`
-  font-size: 36px;
-  max-width: 676px;
-  color: ${cores.branca};
-  margin-top: -160px;
-  margin-left: -1015px;
-`
-export const Paragrafo = styled.p`
   font-size: 32px;
-  max-width: 101px;
   color: ${cores.branca};
-  margin-left: -1015px;
+  margin-top: 140px;
+  margin-left: 0px;
+  font-weight: bold;
+`
+export const Paragrafo = styled.h2`
+  font-size: 32px;
+  color: ${cores.branca};
+  margin-top: -310px;
+  font-weight: 100;
 `
