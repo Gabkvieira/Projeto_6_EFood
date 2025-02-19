@@ -6,9 +6,10 @@ import { Props } from '.'
 export const TagContainer = styled.div<Props>`
   background-color: ${cores.fundoTag};
   color: ${cores.textoTag};
-  font-size: 10px;
-  font-weight: bold;
+  font-size: 12px;
+  font-weight: 700;
   padding: 4px 6px;
   margin-right: 6px;
   display: inline-block;
+  line-height: 14.06px;
 `

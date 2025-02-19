@@ -9,7 +9,7 @@ export const Container = styled.section<Omit<Props, 'pratos'>>`
 export const List = styled.ul`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  column-gap: 24px;
+  column-gap: 32px;
   margin-top: 40px;
 `
 
