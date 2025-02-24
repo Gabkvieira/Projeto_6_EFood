@@ -3,7 +3,7 @@ import styled from 'styled-components'
 import { Props } from '.'
 
 export const Container = styled.section<Omit<Props, 'pratos'>>`
-  padding: 32px 0;
+  padding: 16px 0;
 `
 
 export const List = styled.ul`

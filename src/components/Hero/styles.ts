@@ -18,7 +18,7 @@ export const Imagem = styled.div`
 export const Titulo = styled.h2`
   font-size: 36px;
   max-width: 539px;
-  margin-top: 166px;
+  margin-top: 150px;
   margin-left: 180px;
   text-align: center;
 `

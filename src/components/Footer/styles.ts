@@ -2,8 +2,9 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const Container = styled.footer`
-  padding: 32px 0;
+  margin-bottom: 40px;
   font-size: 10px;
+  margin-top: 120px;
 
   p {
     text-align: center;
@@ -11,12 +12,15 @@ export const Container = styled.footer`
   }
 
   .logo {
-    margin-left: 445px;
+    img {
+      margin-left: 445px;
+      margin-top: 40px;
+    }
   }
 `
 export const Links = styled.ul`
   display: flex;
-  margin-top: -32px;
+  margin-top: -48px;
   margin-left: 460px;
 `
 
@@ -27,5 +31,5 @@ export const Link = styled.a`
 `
 
 export const FooterSection = styled.div`
-  margin-bottom: 64px;
+  margin-bottom: 80px;
 `

@@ -40,14 +40,17 @@ export const Infos = styled.div`
 export const Botao = styled.button`
   background-color: ${cores.textoTag};
   border: 2px solid ${cores.textoTag};
-  color: ${cores.fundoTag};
   font-size: 14px;
   line-height: 16.41px;
   font-weight: 700;
-  text-decoration: none;
   width: 95%;
   height: 24px;
   align-itens: center;
   margin-top: 3px;
   margin-left: 8px;
+
+  a {
+    text-decoration: none;
+    color: ${cores.fundoTag};
+  }
 `

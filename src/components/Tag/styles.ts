@@ -12,4 +12,5 @@ export const TagContainer = styled.div<Props>`
   margin-right: 6px;
   display: inline-block;
   line-height: 14.06px;
+  widht: 121px;
 `

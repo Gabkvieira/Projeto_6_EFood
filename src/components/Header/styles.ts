@@ -2,7 +2,6 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const HeaderBar = styled.header`
-  padding: 24px;
   border-radius: 16px;
   margin-bottom: 16 px;
   display: flex;
@@ -19,27 +18,21 @@ export const HeaderBar = styled.header`
 
 export const Links = styled.ul`
   display: flex;
-  margin-left: 40px;
+  margin-left: 450px;
+  margin-top: 82px;
 `
 
 export const LinkItem = styled.li`
-  margin-right: 450px;
+  margin-right: 350px;
 
   p {
-    margin-left: 400px;
+    width: 105%;
     font-size: 18px;
     font-weight: bold;
   }
 
   img {
-    margin-left: -120px;
     margin-top: -15px;
-  }
-`
-
-export const LinkCart = styled.a`
-  display: flex;
-  p {
-    margin-left: -600px;
+    margin-right: -105px;
   }
 `
