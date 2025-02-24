@@ -15,6 +15,10 @@ export const Container = styled.footer`
     img {
       margin-left: 445px;
       margin-top: 40px;
+
+      @media only screen and (max-width: 767px) {
+        margin-left: 150px;
+      }
     }
   }
 `
@@ -22,6 +26,10 @@ export const Links = styled.ul`
   display: flex;
   margin-top: -48px;
   margin-left: 460px;
+
+  @media only screen and (max-width: 767px) {
+    margin-left: 160px;
+  }
 `
 
 export const Link = styled.a`

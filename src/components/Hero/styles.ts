@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 
 export const Imagem = styled.div`
-  width: 2031.81px;
   height: 384px;
   display: block;
   background-repeat: no-repeat;
@@ -12,13 +11,24 @@ export const Imagem = styled.div`
     height: 57.5px;
     width: 125px;
     margin-top: 40px;
-    margin-left: 390px;
+    margin-left: 445px;
+
+    @media only screen and (max-width: 767px) {
+      margin-left: 145px;
+    }
   }
 `
 export const Titulo = styled.h2`
   font-size: 36px;
   max-width: 539px;
   margin-top: 150px;
-  margin-left: 180px;
+  margin-left: 230px;
   text-align: center;
+
+  @media only screen and (max-width: 767px) {
+    font-size: 30px;
+    width: 80%;
+    margin-top: 100px;
+    margin-left: 40px;
+  }
 `

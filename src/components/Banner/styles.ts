@@ -22,10 +22,18 @@ export const Titulo = styled.h2`
   margin-top: 140px;
   margin-left: 0px;
   font-weight: bold;
+
+  @media only screen and (max-width: 767px) {
+    margin-left: 16px;
+  }
 `
 export const Paragrafo = styled.h2`
   font-size: 32px;
   color: ${cores.branca};
   margin-top: -310px;
   font-weight: 100;
+
+  @media only screen and (max-width: 767px) {
+    margin-left: 16px;
+  }
 `

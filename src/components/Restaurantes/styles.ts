@@ -7,8 +7,12 @@ export const Card = styled.div`
   position: relative;
   border: solid 1px ${cores.fundoTag};
   margin-bottom: 48px;
-  widht: 472px;
   height: 398px;
+
+  @media only screen and (max-width: 767px) {
+    width: 90%;
+    margin-left: 16px;
+  }
 
   img {
     width: 100%;
@@ -34,7 +38,7 @@ export const Descricao = styled.p`
   display: block;
   margin-top: 16px;
   margin-left: 8px;
-  width: 456px;
+  width: 95%;
   margin-bottom: -10px;
 `
 
@@ -52,6 +56,11 @@ export const Botao = styled.button`
   height: 24px;
   width: 82px;
   margin-left: 8px;
+
+  @media only screen and (max-width: 767px) {
+    margin-top: 12px;
+  }
+
   a {
     text-decoration: none;
     color: ${cores.textoTag};
@@ -64,6 +73,10 @@ export const Nota = styled.div`
   right: 37px;
   font-weight: 700;
   font-size: 18px;
+
+  @media only screen and (max-width: 767px) {
+    top: 182px;
+  }
 `
 export const LogoEstrela = styled.div`
   position: relative;
@@ -71,4 +84,9 @@ export const LogoEstrela = styled.div`
   height: 21px;
   top: -118px;
   margin-left: 440px;
+
+  @media only screen and (max-width: 767px) {
+    top: -138px;
+    margin-left: 340px;
+  }
 `

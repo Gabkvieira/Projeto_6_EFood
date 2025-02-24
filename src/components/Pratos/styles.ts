@@ -8,9 +8,18 @@ export const Card = styled.div`
   color: ${cores.textoTag};
   margin-bottom: 32px;
 
+  @media only screen and (max-width: 767px) {
+    width: 90%;
+    margin-left: 16px;
+  }
+
   img {
     margin-left: 8px;
     margin-top: 8px;
+
+    @media only screen and (max-width: 767px) {
+      width: 95%;
+    }
   }
 `
 
@@ -30,6 +39,10 @@ export const Descricao = styled.p`
   margin-left: 8px;
   width: 95%;
   font-weight: 400;
+
+  @media only screen and (max-width: 767px) {
+    width: 90%;
+  }
 `
 
 export const Infos = styled.div`
@@ -48,6 +61,11 @@ export const Botao = styled.button`
   align-itens: center;
   margin-top: 3px;
   margin-left: 8px;
+
+  @media only screen and (max-width: 767px) {
+    width: 90%;
+    margin-top: 0px;
+  }
 
   a {
     text-decoration: none;

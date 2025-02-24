@@ -11,6 +11,11 @@ export const List = styled.ul`
   grid-template-columns: 1fr 1fr;
   column-gap: 80px;
   margin-top: 50px;
+
+  @media only screen and (max-width: 767px) {
+    grid-template-columns: 1fr;
+    margin-top: 20px;
+  }
 `
 
 export const Title = styled.h2`
