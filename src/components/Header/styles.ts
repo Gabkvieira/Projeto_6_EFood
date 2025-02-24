@@ -20,6 +20,8 @@ export const Links = styled.ul`
   display: flex;
   margin-left: 450px;
   margin-top: 82px;
+  justify-content: space-between;
+  align-items: center;
 
   @media only screen and (max-width: 767px) {
     display: block;
@@ -47,11 +49,6 @@ export const LinkItem = styled.li`
   }
 
   img {
-    margin-top: -15px;
     margin-right: -105px;
-
-    @media only screen and (max-width: 767px) {
-      margin-top: 0px;
-    }
   }
 `

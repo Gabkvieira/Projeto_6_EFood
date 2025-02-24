@@ -8,7 +8,7 @@ export const Container = styled.footer`
 
   p {
     text-align: center;
-    widht: 480px;
+    widht: 400px;
   }
 
   .logo {

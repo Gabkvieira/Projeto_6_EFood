@@ -14,7 +14,7 @@ export const Imagem = styled.div`
     margin-left: 445px;
 
     @media only screen and (max-width: 767px) {
-      margin-left: 145px;
+      margin-left: 140px;
     }
   }
 `
