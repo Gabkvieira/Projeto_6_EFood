@@ -1,10 +1,10 @@
-import Game from '../../models/Comida'
+import { Comida } from '../../pages/Home'
 import Restaurantes from '../Restaurantes'
 
 import { Container, List } from './styles'
 
 export type Props = {
-  comidas: Game[]
+  comidas: Comida[]
 }
 
 const ListaRestaurantes = ({ comidas }: Props) => (
@@ -14,12 +14,12 @@ const ListaRestaurantes = ({ comidas }: Props) => (
         {comidas.map((comida) => (
           <Restaurantes
             key={comida.id}
-            description={comida.description}
-            image={comida.image}
-            infos={comida.infos}
-            nota={comida.nota}
+            descricao={comida.descricao}
+            capa={comida.capa}
+            tipo={comida.tipo}
+            avaliacao={comida.avaliacao}
             logoEstrela={comida.logoEstrela}
-            title={comida.title}
+            titulo={comida.titulo}
           />
         ))}
       </List>

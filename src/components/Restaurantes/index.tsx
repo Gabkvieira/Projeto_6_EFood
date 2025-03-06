@@ -12,32 +12,32 @@ import {
 } from './styles'
 
 type Props = {
-  title: string
-  description: string
-  infos: string[]
-  nota: string[]
+  titulo: string
+  descricao: string
+  tipo: string[]
+  avaliacao: string[]
   logoEstrela: string
-  image: string
+  capa: string
 }
 
 const Restaurantes = ({
-  title,
-  description,
-  infos,
-  image,
-  nota,
+  titulo,
+  descricao,
+  tipo,
+  capa,
+  avaliacao,
   logoEstrela
 }: Props) => (
   <Card>
-    <img src={image} alt={title} />
+    <img src={capa} alt={titulo} />
     <Infos>
-      {infos.map((info) => (
+      {tipo.map((info) => (
         <Tag key={info}>{info}</Tag>
       ))}
     </Infos>
-    <Titulo>{title}</Titulo>
-    <Descricao>{description}</Descricao>
-    <Nota>{nota}</Nota>
+    <Titulo>{titulo}</Titulo>
+    <Descricao>{descricao}</Descricao>
+    <Nota>{avaliacao}</Nota>
     <LogoEstrela>
       <img src={logoEstrela} alt="estrela" />
     </LogoEstrela>
