@@ -22,7 +22,6 @@ export const GlobalCss = createGlobalStyle`
   body {
     background-color: ${cores.branca};
     color: ${cores.fundoTag};
-    padding-top: 40px;
   }
 
   .container {

@@ -2,13 +2,11 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const Container = styled.footer`
-  margin-bottom: 40px;
   font-size: 10px;
   margin-top: 120px;
 
   p {
     text-align: center;
-    widht: 400px;
   }
 
   .logo {

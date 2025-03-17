@@ -1,14 +1,13 @@
 import { useEffect, useState } from 'react'
 
-import Banner from '../../components/Banner'
 import ListaRestaurantes from '../../components/ListaRestaurantes'
+import Hero from '../../components/Hero'
 
 export type Comida = {
   id: number
   titulo: string
-  tipo: string[]
+  tipo: string
   avaliacao: string[]
-  logoEstrela: string
   descricao: string
   capa: string
   cardapio: {
@@ -32,7 +31,7 @@ const Home = () => {
 
   return (
     <>
-      <Banner />
+      <Hero />
       <ListaRestaurantes comidas={restaurantes} />
     </>
   )

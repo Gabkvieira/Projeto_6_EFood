@@ -18,7 +18,6 @@ const ListaRestaurantes = ({ comidas }: Props) => (
             capa={comida.capa}
             tipo={comida.tipo}
             avaliacao={comida.avaliacao}
-            logoEstrela={comida.logoEstrela}
             titulo={comida.titulo}
           />
         ))}

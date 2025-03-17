@@ -8,6 +8,7 @@ export const Card = styled.div`
   border: solid 1px ${cores.fundoTag};
   margin-bottom: 48px;
   height: 398px;
+  width: 472px;
 
   @media only screen and (max-width: 767px) {
     width: 90%;
@@ -16,6 +17,7 @@ export const Card = styled.div`
 
   img {
     width: 100%;
+    height: 217px;
   }
 
   ${TagContainer} {
@@ -28,7 +30,7 @@ export const Titulo = styled.h3`
   font-size: 18px;
   display: block;
   margin-top: 8px;
-  margin-left: 8px;
+  margin-left: 7px;
   line-height: 21.09px;
 `
 
@@ -38,8 +40,9 @@ export const Descricao = styled.p`
   display: block;
   margin-top: 16px;
   margin-left: 8px;
-  width: 95%;
-  margin-bottom: -10px;
+  width: 456px;
+  height: 88px;
+  margin-bottom: 16px;
 `
 
 export const Infos = styled.div`

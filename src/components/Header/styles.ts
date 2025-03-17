@@ -3,7 +3,6 @@ import { cores } from '../../styles'
 
 export const HeaderBar = styled.header`
   border-radius: 16px;
-  margin-bottom: 16px;
   display: flex;
   justify-content: space-between;
   height: 186px;

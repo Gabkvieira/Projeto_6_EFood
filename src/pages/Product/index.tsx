@@ -1,8 +1,9 @@
 import { useParams } from 'react-router-dom'
-import Hero from '../../components/Hero'
 
 import { useEffect, useState } from 'react'
 import { Comida } from '../Home'
+import Header from '../../components/Header'
+import Banner from '../../components/Banner'
 
 const Product = () => {
   const { id } = useParams()
@@ -21,7 +22,8 @@ const Product = () => {
 
   return (
     <>
-      <Hero />
+      <Header />
+      <Banner />
     </>
   )
 }
