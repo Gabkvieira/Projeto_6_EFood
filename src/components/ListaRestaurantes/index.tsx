@@ -12,14 +12,16 @@ const ListaRestaurantes = ({ comidas }: Props) => (
     <div className="container">
       <List>
         {comidas.map((comida) => (
-          <Restaurantes
-            key={comida.id}
-            descricao={comida.descricao}
-            capa={comida.capa}
-            tipo={comida.tipo}
-            avaliacao={comida.avaliacao}
-            titulo={comida.titulo}
-          />
+          <li key={comida.id}>
+            <Restaurantes
+              id={comida.id}
+              descricao={comida.descricao}
+              capa={comida.capa}
+              tipo={comida.tipo}
+              avaliacao={comida.avaliacao}
+              titulo={comida.titulo}
+            />
+          </li>
         ))}
       </List>
     </div>

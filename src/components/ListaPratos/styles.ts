@@ -2,7 +2,7 @@ import styled from 'styled-components'
 
 import { Props } from '.'
 
-export const Container = styled.section<Omit<Props, 'pratos'>>`
+export const Container = styled.section<Omit<Props, 'restaurantes'>>`
   padding: 16px 0;
 `
 

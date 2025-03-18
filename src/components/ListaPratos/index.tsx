@@ -4,14 +4,14 @@ import Pratos from '../Pratos'
 import { Container, List } from './styles'
 
 export type Props = {
-  pratos: Comida[]
+  restaurantes: Comida[]
 }
 
-const ListaPratos = ({ pratos }: Props) => (
+const ListaPratos = ({ restaurantes }: Props) => (
   <Container>
     <div className="container">
       <List>
-        {pratos.map((comida) => (
+        {restaurantes.map((comida) => (
           <li key={comida.cardapio.id}>
             <Pratos
               id={comida.cardapio.id}

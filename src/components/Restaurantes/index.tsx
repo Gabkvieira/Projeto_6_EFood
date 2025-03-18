@@ -1,7 +1,16 @@
 import Tag from '../Tag'
 import { Link } from 'react-router-dom'
+import estrela from '../../assets/images/estrela.png'
 
-import { Card, Descricao, Titulo, Infos, Botao, Nota } from './styles'
+import {
+  Card,
+  Descricao,
+  Titulo,
+  Infos,
+  Botao,
+  Nota,
+  LogoEstrela
+} from './styles'
 
 type Props = {
   titulo: string
@@ -9,9 +18,17 @@ type Props = {
   tipo: string
   avaliacao: string[]
   capa: string
+  id: number
 }
 
-const Restaurantes = ({ titulo, descricao, tipo, capa, avaliacao }: Props) => (
+const Restaurantes = ({
+  titulo,
+  descricao,
+  tipo,
+  capa,
+  avaliacao,
+  id
+}: Props) => (
   <Card>
     <img src={capa} alt={titulo} />
     <Infos>
@@ -20,9 +37,11 @@ const Restaurantes = ({ titulo, descricao, tipo, capa, avaliacao }: Props) => (
     <Titulo>{titulo}</Titulo>
     <Descricao>{descricao}</Descricao>
     <Nota>{avaliacao}</Nota>
-
+    <LogoEstrela>
+      <img src={estrela} alt="estrela" />
+    </LogoEstrela>
     <Botao>
-      <Link to="/perfil">Saiba mais</Link>
+      <Link to={`/restaurante/${id}`}>Saiba mais</Link>
     </Botao>
   </Card>
 )

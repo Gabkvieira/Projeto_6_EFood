@@ -1,4 +1,5 @@
 import { useEffect, useState } from 'react'
+import { useParams } from 'react-router-dom'
 
 import Banner from '../../components/Banner'
 import ListaPratos from '../../components/ListaPratos'
@@ -6,19 +7,23 @@ import { Comida } from '../Home'
 import Header from '../../components/Header'
 
 const Perfil = () => {
-  const [pratos, setPratos] = useState<Comida[]>([])
+  const { id } = useParams()
+
+  const [restaurante, setRestaurante] = useState<Comida>()
 
   useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/`)
       .then((res) => res.json())
-      .then((res) => setPratos(res))
-  }, [])
+      .then((res) =>
+        setRestaurante(res.filter((item: Comida) => item.id === Number(id))[0])
+      )
+  }, [id])
 
   return (
     <>
       <Header />
       <Banner />
-      <ListaPratos pratos={pratos} />
+      <ListaPratos restaurantes={restaurante} />
     </>
   )
 }
