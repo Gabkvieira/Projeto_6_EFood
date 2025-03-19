@@ -7,17 +7,17 @@ export const Card = styled.div`
   position: relative;
   border: solid 1px ${cores.fundoTag};
   margin-bottom: 48px;
-  height: 398px;
+  height: 425px;
   width: 472px;
-
-  @media only screen and (max-width: 767px) {
-    width: 90%;
-    margin-left: 16px;
-  }
 
   img {
     width: 100%;
     height: 217px;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 90%;
+    margin-left: 16px;
   }
 
   ${TagContainer} {
@@ -83,10 +83,13 @@ export const Nota = styled.div`
 `
 export const LogoEstrela = styled.div`
   position: relative;
-  width: 21px;
-  height: 21px;
-  top: -118px;
+  top: -145px;
   margin-left: 440px;
+
+  img {
+    width: 21px;
+    height: 21px;
+  }
 
   @media only screen and (max-width: 767px) {
     top: -138px;

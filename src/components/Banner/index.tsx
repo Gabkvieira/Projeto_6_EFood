@@ -1,35 +1,16 @@
-// import { Imagem, Paragrafo, Titulo } from './styles'
-// import { Comida } from '../../pages/Home'
-
-// export type Props = {
-//   comidas: Comida[]
-// }
-
-// const Banner = ({ comidas }: Props) => (
-//   <Imagem style={{ backgroundImage: `url(${comida.capa})` }}>
-//     <div className="container">
-//       <div>
-//       {comidas.map((comida) => (
-//           <Paragrafo tipo={comida.tipo}/>
-//           <Titulo titulo={comida.titulo}/>
-//         ))}
-//       </div>
-//     </div>
-//   </Imagem>
-// )
-
-// export default Banner
-
 import { Imagem, Paragrafo, Titulo } from './styles'
+import { Menu } from '../../pages/Home'
 
-import bannerImg from '../../assets/images/banner.png'
+export type Props = {
+  restaurante?: Menu
+}
 
-const Banner = () => (
-  <Imagem style={{ backgroundImage: `url(${bannerImg})` }}>
+const Banner = ({ restaurante }: Props) => (
+  <Imagem style={{ backgroundImage: `url(${restaurante?.capa})` }}>
     <div className="container">
       <div>
-        <Paragrafo>Italiana</Paragrafo>
-        <Titulo>La Dolce Vita Trattoria</Titulo>
+        <Paragrafo>{restaurante?.tipo}</Paragrafo>
+        <Titulo>{restaurante?.titulo}</Titulo>
       </div>
     </div>
   </Imagem>

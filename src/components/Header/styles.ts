@@ -4,7 +4,7 @@ import { cores } from '../../styles'
 export const HeaderBar = styled.header`
   border-radius: 16px;
   display: flex;
-  justify-content: space-between;
+  text-align: center;
   height: 186px;
 
   a {
@@ -17,10 +17,9 @@ export const HeaderBar = styled.header`
 
 export const Links = styled.ul`
   display: flex;
-  margin-left: 450px;
   margin-top: 82px;
-  justify-content: space-between;
   align-items: center;
+  margin-left: -80px;
 
   @media only screen and (max-width: 767px) {
     display: block;
@@ -30,7 +29,7 @@ export const Links = styled.ul`
 `
 
 export const LinkItem = styled.li`
-  margin-right: 350px;
+  margin-right: 410px;
 
   @media only screen and (max-width: 767px) {
     margin-bottom: 16px;
@@ -38,7 +37,7 @@ export const LinkItem = styled.li`
   }
 
   p {
-    width: 105%;
+    width: 232%;
     font-size: 18px;
     font-weight: bold;
 

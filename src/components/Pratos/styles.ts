@@ -3,7 +3,7 @@ import { cores } from '../../styles'
 
 export const Card = styled.div`
   background-color: ${cores.fundoTag};
-  height: 338px;
+  height: 480px;
   position: relative;
   color: ${cores.textoTag};
   margin-bottom: 32px;
@@ -17,6 +17,8 @@ export const Card = styled.div`
   img {
     margin-left: 8px;
     margin-top: 8px;
+    width: 95%;
+    height: 217px;
 
     @media only screen and (max-width: 767px) {
       width: 95%;
@@ -60,7 +62,7 @@ export const Botao = styled.button`
   width: 95%;
   height: 24px;
   align-itens: center;
-  margin-top: 3px;
+  margin-top: 8px;
   margin-left: 8px;
 
   @media only screen and (max-width: 767px) {

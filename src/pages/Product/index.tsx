@@ -1,29 +1,30 @@
+import { useEffect, useState } from 'react'
 import { useParams } from 'react-router-dom'
 
-import { useEffect, useState } from 'react'
-import { Comida } from '../Home'
-import Header from '../../components/Header'
 import Banner from '../../components/Banner'
+import ListaPratos from '../../components/ListaPratos'
+import { Menu } from '../Home'
+import Header from '../../components/Header'
 
 const Product = () => {
   const { id } = useParams()
 
-  const [comida, setComida] = useState<Comida>()
+  const [restaurante, setRestaurante] = useState<Menu>()
 
   useEffect(() => {
-    fetch(`https://fake-api-tau.vercel.app/api/efood/restaurantes/${id}`)
+    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
       .then((res) => res.json())
-      .then((res) => setComida(res))
+      .then((res) =>
+        setRestaurante(res.filter((item: Menu) => item.id === Number(id))[0])
+      )
   }, [id])
 
-  if (!comida) {
-    return <h3>Carregando...</h3>
-  }
-
+  if (!restaurante) return <></>
   return (
     <>
       <Header />
-      <Banner />
+      <Banner restaurante={restaurante} />
+      <ListaPratos restaurante={restaurante} />
     </>
   )
 }

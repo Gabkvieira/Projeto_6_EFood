@@ -7,7 +7,7 @@ import fundo from '../../assets/images/fundo.png'
 
 const Header = () => (
   <HeaderBar style={{ backgroundImage: `url(${fundo})` }}>
-    <div>
+    <div className="container">
       <nav>
         <Links>
           <LinkItem>
