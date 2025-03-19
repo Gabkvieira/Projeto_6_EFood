@@ -16,8 +16,9 @@ export const Card = styled.div`
   }
 
   @media only screen and (max-width: 767px) {
-    width: 90%;
-    margin-left: 16px;
+    width: 80%;
+    margin-left: 8px;
+    height: 470px;
   }
 
   ${TagContainer} {
@@ -43,6 +44,11 @@ export const Descricao = styled.p`
   width: 456px;
   height: 88px;
   margin-bottom: 16px;
+
+  @media only screen and (max-width: 767px) {
+    width: 95%;
+    margin-bottom: 52px;
+  }
 `
 
 export const Infos = styled.div`
@@ -60,10 +66,6 @@ export const Botao = styled.button`
   width: 82px;
   margin-left: 8px;
 
-  @media only screen and (max-width: 767px) {
-    margin-top: 12px;
-  }
-
   a {
     text-decoration: none;
     color: ${cores.textoTag};
@@ -78,7 +80,7 @@ export const Nota = styled.div`
   font-size: 18px;
 
   @media only screen and (max-width: 767px) {
-    top: 182px;
+    top: 227px;
   }
 `
 export const LogoEstrela = styled.div`
@@ -92,7 +94,7 @@ export const LogoEstrela = styled.div`
   }
 
   @media only screen and (max-width: 767px) {
-    top: -138px;
-    margin-left: 340px;
+    top: -180px;
+    margin-left: 300px;
   }
 `

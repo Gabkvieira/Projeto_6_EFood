@@ -7,6 +7,10 @@ export const Imagem = styled.div`
   background-size: cover;
   font-weight: bold;
 
+  @media only screen and (max-width: 767px) {
+    width: 84%;
+  }
+
   img {
     height: 57.5px;
     width: 125px;
@@ -14,7 +18,7 @@ export const Imagem = styled.div`
     margin-left: 445px;
 
     @media only screen and (max-width: 767px) {
-      margin-left: 140px;
+      margin-left: 120px;
     }
   }
 `

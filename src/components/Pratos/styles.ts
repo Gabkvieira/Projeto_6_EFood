@@ -9,9 +9,9 @@ export const Card = styled.div`
   margin-bottom: 32px;
 
   @media only screen and (max-width: 767px) {
-    width: 90%;
-    margin-left: 16px;
-    height: 350px;
+    width: 80%;
+    margin-left: 8px;
+    height: 475px;
   }
 
   img {
@@ -67,7 +67,7 @@ export const Botao = styled.button`
 
   @media only screen and (max-width: 767px) {
     width: 90%;
-    margin-top: 8px;
+    margin-top: 16px;
     margin-left: 16px;
   }
 

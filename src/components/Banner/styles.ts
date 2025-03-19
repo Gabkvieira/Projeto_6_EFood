@@ -8,6 +8,10 @@ export const Imagem = styled.div`
   background-repeat: no-repeat;
   background-size: cover;
 
+  @media only screen and (max-width: 767px) {
+    width: 85%;
+  }
+
   .container {
     position: relative;
     padding-top: 340px;

@@ -5,6 +5,10 @@ export const Container = styled.footer`
   font-size: 10px;
   margin-top: 120px;
 
+  @media only screen and (max-width: 767px) {
+    width: 85%;
+  }
+
   p {
     text-align: center;
   }
@@ -15,7 +19,7 @@ export const Container = styled.footer`
       margin-top: 40px;
 
       @media only screen and (max-width: 767px) {
-        margin-left: 150px;
+        margin-left: 110px;
       }
     }
   }
@@ -26,7 +30,7 @@ export const Links = styled.ul`
   margin-left: 460px;
 
   @media only screen and (max-width: 767px) {
-    margin-left: 160px;
+    margin-left: 125px;
   }
 `
 
