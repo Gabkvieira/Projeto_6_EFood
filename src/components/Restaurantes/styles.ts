@@ -16,7 +16,7 @@ export const Card = styled.div`
   }
 
   @media only screen and (max-width: 767px) {
-    width: 80%;
+    width: 95%;
     margin-left: 8px;
     height: 470px;
   }
@@ -43,7 +43,7 @@ export const Descricao = styled.p`
   margin-left: 8px;
   width: 456px;
   height: 88px;
-  margin-bottom: 16px;
+  margin-bottom: 8px;
 
   @media only screen and (max-width: 767px) {
     width: 95%;
@@ -85,7 +85,7 @@ export const Nota = styled.div`
 `
 export const LogoEstrela = styled.div`
   position: relative;
-  top: -145px;
+  top: -138px;
   margin-left: 440px;
 
   img {
@@ -94,7 +94,7 @@ export const LogoEstrela = styled.div`
   }
 
   @media only screen and (max-width: 767px) {
-    top: -180px;
-    margin-left: 300px;
+    top: -181px;
+    margin-left: 360px;
   }
 `

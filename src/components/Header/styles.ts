@@ -2,13 +2,12 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const HeaderBar = styled.header`
-  border-radius: 16px;
   display: flex;
   text-align: center;
   height: 186px;
 
   @media only screen and (max-width: 767px) {
-    width: 85%;
+    width: 100%;
   }
 
   a {
@@ -23,8 +22,10 @@ export const Links = styled.ul`
   display: flex;
   margin-top: 82px;
   align-items: center;
+  margin-left: -80px;
 
   img {
+    margin-left: 50px;
     @media only screen and (max-width: 767px) {
       margin-left: -100px;
       margin-top: 0px;
@@ -39,7 +40,7 @@ export const Links = styled.ul`
 `
 
 export const LinkItem = styled.li`
-  margin-right: 410px;
+  margin-right: 365px;
 
   @media only screen and (max-width: 767px) {
     margin-bottom: 16px;

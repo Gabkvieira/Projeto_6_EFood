@@ -9,7 +9,7 @@ export const Card = styled.div`
   margin-bottom: 32px;
 
   @media only screen and (max-width: 767px) {
-    width: 80%;
+    width: 95%;
     margin-left: 8px;
     height: 475px;
   }
@@ -42,6 +42,7 @@ export const Descricao = styled.p`
   margin-left: 8px;
   width: 95%;
   font-weight: 400;
+  margin-bottom: 8px;
 
   @media only screen and (max-width: 767px) {
     width: 90%;
@@ -62,7 +63,6 @@ export const Botao = styled.button`
   width: 95%;
   height: 24px;
   align-itens: center;
-  margin-top: 8px;
   margin-left: 8px;
 
   @media only screen and (max-width: 767px) {

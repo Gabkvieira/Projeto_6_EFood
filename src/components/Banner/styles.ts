@@ -9,7 +9,7 @@ export const Imagem = styled.div`
   background-size: cover;
 
   @media only screen and (max-width: 767px) {
-    width: 85%;
+    width: 100%;
   }
 
   .container {

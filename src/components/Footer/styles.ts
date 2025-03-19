@@ -6,7 +6,7 @@ export const Container = styled.footer`
   margin-top: 120px;
 
   @media only screen and (max-width: 767px) {
-    width: 85%;
+    width: 100%;
   }
 
   p {
@@ -19,7 +19,7 @@ export const Container = styled.footer`
       margin-top: 40px;
 
       @media only screen and (max-width: 767px) {
-        margin-left: 110px;
+        margin-left: 145px;
       }
     }
   }
@@ -30,7 +30,7 @@ export const Links = styled.ul`
   margin-left: 460px;
 
   @media only screen and (max-width: 767px) {
-    margin-left: 125px;
+    margin-left: 165px;
   }
 `
 

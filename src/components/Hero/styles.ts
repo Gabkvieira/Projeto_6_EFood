@@ -8,7 +8,7 @@ export const Imagem = styled.div`
   font-weight: bold;
 
   @media only screen and (max-width: 767px) {
-    width: 84%;
+    width: 100%;
   }
 
   img {
@@ -18,7 +18,7 @@ export const Imagem = styled.div`
     margin-left: 445px;
 
     @media only screen and (max-width: 767px) {
-      margin-left: 120px;
+      margin-left: 150px;
     }
   }
 `
@@ -32,7 +32,7 @@ export const Titulo = styled.h2`
   @media only screen and (max-width: 767px) {
     font-size: 30px;
     width: 80%;
-    margin-top: 100px;
+    margin-top: 75px;
     margin-left: 40px;
   }
 `
