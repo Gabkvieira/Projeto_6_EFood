@@ -8,6 +8,11 @@ export const Card = styled.div`
   color: ${cores.textoTag};
   margin-bottom: 32px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
   @media only screen and (max-width: 767px) {
     width: 95%;
     margin-left: 8px;
@@ -15,7 +20,7 @@ export const Card = styled.div`
   }
 
   img {
-    margin-left: 8px;
+    margin-left: 0px;
     margin-top: 8px;
     width: 95%;
     height: 217px;
@@ -31,7 +36,7 @@ export const Titulo = styled.h3`
   font-size: 16px;
   display: block;
   margin-top: 8px;
-  margin-left: 8px;
+  margin-left: 0;
 `
 
 export const Descricao = styled.p`
@@ -64,8 +69,9 @@ export const Botao = styled.button`
   width: 95%;
   height: 24px;
   align-itens: center;
-  margin-left: 8px;
+  margin-left: 0;
   cursor: pointer;
+  margin-bottom: 8px;
 
   @media only screen and (max-width: 767px) {
     width: 90%;
