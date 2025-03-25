@@ -21,6 +21,8 @@ const ListaPratos = ({ restaurante }: Props) => {
                 descricao={menu.descricao}
                 foto={menu.foto}
                 nome={menu.nome}
+                porcao={menu.porcao}
+                preco={menu.preco}
               />
             </li>
           ))}

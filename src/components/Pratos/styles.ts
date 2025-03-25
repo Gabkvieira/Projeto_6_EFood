@@ -57,6 +57,7 @@ export const Infos = styled.div`
 export const Botao = styled.button`
   background-color: ${cores.textoTag};
   border: 2px solid ${cores.textoTag};
+  color: ${cores.fundoTag};
   font-size: 14px;
   line-height: 16.41px;
   font-weight: 700;
@@ -64,15 +65,11 @@ export const Botao = styled.button`
   height: 24px;
   align-itens: center;
   margin-left: 8px;
+  cursor: pointer;
 
   @media only screen and (max-width: 767px) {
     width: 90%;
     margin-top: 16px;
     margin-left: 16px;
-  }
-
-  a {
-    text-decoration: none;
-    color: ${cores.fundoTag};
   }
 `
