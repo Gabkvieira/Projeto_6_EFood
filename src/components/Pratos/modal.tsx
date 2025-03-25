@@ -72,7 +72,7 @@ const ModalContent = styled.div`
 `
 
 const ImageContainer = styled.div`
-  margin-left: -16px;
+  margin-left: 0;
   flex: 0 0 40%;
 
   img {
