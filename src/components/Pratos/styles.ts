@@ -75,7 +75,5 @@ export const Botao = styled.button`
 
   @media only screen and (max-width: 767px) {
     width: 90%;
-    margin-top: 16px;
-    margin-left: 16px;
   }
 `
