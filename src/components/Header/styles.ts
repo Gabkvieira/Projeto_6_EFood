@@ -35,7 +35,7 @@ export const Links = styled.ul`
   @media only screen and (max-width: 767px) {
     display: block;
     margin-left: 0px;
-    margin-top: 0px;
+    margin-top: 32px;
   }
 `
 

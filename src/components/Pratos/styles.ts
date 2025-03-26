@@ -36,14 +36,19 @@ export const Titulo = styled.h3`
   font-size: 16px;
   display: block;
   margin-top: 8px;
-  margin-left: 0;
+  margin-left: 12px;
+  align-self: flex-start;
+
+  @media only screen and (max-width: 767px) {
+    margin-left: 24px;
+  }
 `
 
 export const Descricao = styled.p`
   font-size: 14px;
   line-height: 22px;
   display: block;
-  margin-top: 8px;
+  margin-top: 0;
   margin-left: 8px;
   width: 95%;
   font-weight: 400;
@@ -51,6 +56,7 @@ export const Descricao = styled.p`
 
   @media only screen and (max-width: 767px) {
     width: 90%;
+    margin-left: 8px;
   }
 `
 
