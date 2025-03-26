@@ -152,7 +152,7 @@ const Modal = ({ isOpen, onClose, title, children, preco }: ModalProps) => {
               <ModalTitle>{title}</ModalTitle>
               {childContent}
               <ActionButton onClick={onClose}>
-                Adicionar ao carrinho - {preco}
+                Adicionar ao carrinho - R$ {preco}
               </ActionButton>
             </ContentContainer>
           </ModalContent>
