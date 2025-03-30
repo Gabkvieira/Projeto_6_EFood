@@ -1,6 +1,7 @@
 import { useState } from 'react'
 
 import { Card, Descricao, Titulo, Botao } from './styles'
+// import { ImageContainer } from './modal'
 import Modal from './modal'
 
 type Props = {
@@ -33,13 +34,24 @@ const Pratos = ({ foto, nome, descricao, preco, porcao }: Props) => {
         preco={preco}
       >
         <div>
-          <img
-            src={foto}
-            alt={nome}
-            style={{ width: '100%', height: 'auto', borderRadius: '8px' }}
-          />
-          <p>{descricao}</p>
-          <p style={{ fontStyle: 'italic', margin: '12px 0' }}>
+          <img src={foto} alt={nome} />
+          <p
+            style={{
+              fontWeight: '400',
+              fontSize: '14px',
+              textAlign: 'justify',
+              margin: '0 8px 0'
+            }}
+          >
+            {descricao}
+          </p>
+          <p
+            style={{
+              fontWeight: '400',
+              fontSize: '14px',
+              margin: '16px 8px 16px'
+            }}
+          >
             Serve: {porcao}
           </p>
         </div>

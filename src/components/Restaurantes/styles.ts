@@ -44,6 +44,7 @@ export const Descricao = styled.p`
   width: 456px;
   height: 88px;
   margin-bottom: 8px;
+  text-align: justify;
 
   @media only screen and (max-width: 767px) {
     width: 95%;

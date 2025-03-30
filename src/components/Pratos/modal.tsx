@@ -25,34 +25,38 @@ const ModalOverlay = styled.div`
 
 const ModalContainer = styled.div`
   background-color: ${cores.fundoTag};
-  border-radius: 8px;
-  padding: 20px;
+  // border-radius: 8px;
+  padding: 0 8px 32px;
   max-width: 90%;
-  width: 700px;
-  max-height: 90vh;
+  width: 1024px;
+  height: auto;
   overflow-y: auto;
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+
+  @media only screen and (max-width: 767px) {
+    max-height: 90vh;
+  }
 `
 
 const ModalHeader = styled.div`
   display: flex;
   justify-content: end;
   align-items: center;
-  margin-bottom: 16px;
 `
 
 const ModalTitle = styled.h3`
-  font-size: 24px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 900;
   color: ${cores.branca};
   margin-bottom: 16px;
-  margin-top: 16px;
+  margin-top: 8px;
+  margin-left: 8px;
 `
 
 const CloseButton = styled.button`
   background: none;
   border: none;
-  font-size: 24px;
+  font-size: 32px;
   cursor: pointer;
   color: ${cores.cinzaClaro};
 
@@ -62,27 +66,32 @@ const CloseButton = styled.button`
 `
 
 const ModalContent = styled.div`
-  margin-bottom: 16px;
-  display: block;
+  display: flex;
   gap: 20px;
 
-  @media (max-width: 768px) {
-    flex-direction: column;
+  @media only screen and (max-width: 767px) {
+    display: block;
   }
 `
 
 const ImageContainer = styled.div`
-  margin-left: 0;
-  flex: 0 0 40%;
+  margin-left: 32px;
 
   img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-    object-fit: fill;
+    height: 280px;
+    width: 280px;
+
+    @media only screen and (max-width: 767px) {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+    @media only screen and (max-width: 767px) {
+      margin-left: 0;
+    }
   }
 `
-
 const ContentContainer = styled.div`
   flex: 1;
 `
@@ -95,14 +104,16 @@ const ModalActions = styled.div`
 `
 
 const ActionButton = styled.button`
-  background-color: ${cores.branca};
+  background-color: ${cores.textoTag};
   color: ${cores.fundoTag};
   border: none;
-  border-radius: 4px;
-  padding: 8px 16px;
+  // border-radius: 4px;
   cursor: pointer;
-  font-weight: bold;
-  margin-top: 8px;
+  font-weight: 700;
+  font-size: 14px;
+  width: 218px;
+  height: 24px;
+  margin-left: 8px;
 
   &:hover {
     opacity: 0.7;
