@@ -35,9 +35,17 @@ export const Sidebar = styled.aside`
   max-width: 360px;
   width: 100%;
 
+  @media only screen and (max-width: 767px) {
+    width: 80%;
+  }
+
   h2 {
     color: ${cores.beje};
     margin-left: 115px;
+
+    @media only screen and (max-width: 767px) {
+      margin-left: 100px;
+    }
   }
 `
 
