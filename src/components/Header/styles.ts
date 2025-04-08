@@ -11,7 +11,7 @@ export const HeaderBar = styled.header`
   }
 
   a {
-    color: ${cores.fundoTag};
+    color: ${cores.salmao};
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;

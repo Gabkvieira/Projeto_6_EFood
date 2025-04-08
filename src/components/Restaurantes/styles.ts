@@ -5,7 +5,7 @@ import { TagContainer } from '../Tag/styles'
 export const Card = styled.div`
   background-color: ${cores.branca};
   position: relative;
-  border: solid 1px ${cores.fundoTag};
+  border: solid 1px ${cores.salmao};
   margin-bottom: 48px;
   height: 425px;
   width: 472px;
@@ -58,8 +58,8 @@ export const Infos = styled.div`
   right: 8px;
 `
 export const Botao = styled.button`
-  background-color: ${cores.fundoTag};
-  border: 2px solid ${cores.fundoTag};
+  background-color: ${cores.salmao};
+  border: 2px solid ${cores.salmao};
   font-size: 14px;
   line-height: 16.41px;
   font-weight: 700;
@@ -69,7 +69,7 @@ export const Botao = styled.button`
 
   a {
     text-decoration: none;
-    color: ${cores.textoTag};
+    color: ${cores.beje};
   }
 `
 

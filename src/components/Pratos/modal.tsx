@@ -8,6 +8,10 @@ type ModalProps = {
   title: string
   children: React.ReactNode
   preco?: string
+  id: number
+  foto: string
+  descricao: string
+  porcao: string
 }
 
 const ModalOverlay = styled.div`
@@ -24,7 +28,7 @@ const ModalOverlay = styled.div`
 `
 
 const ModalContainer = styled.div`
-  background-color: ${cores.fundoTag};
+  background-color: ${cores.salmao};
   // border-radius: 8px;
   padding: 0 8px 32px;
   max-width: 90%;
@@ -61,7 +65,7 @@ const CloseButton = styled.button`
   color: ${cores.cinzaClaro};
 
   &:hover {
-    color: ${cores.fundoTag};
+    color: ${cores.salmao};
   }
 `
 
@@ -84,6 +88,7 @@ const ImageContainer = styled.div`
     @media only screen and (max-width: 767px) {
       height: auto;
       width: 100%;
+      border-radius: 8px;
     }
   }
 
@@ -104,8 +109,8 @@ const ModalActions = styled.div`
 `
 
 const ActionButton = styled.button`
-  background-color: ${cores.textoTag};
-  color: ${cores.fundoTag};
+  background-color: ${cores.beje};
+  color: ${cores.salmao};
   border: none;
   // border-radius: 4px;
   cursor: pointer;

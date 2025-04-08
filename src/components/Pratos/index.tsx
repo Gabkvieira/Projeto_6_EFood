@@ -1,7 +1,6 @@
 import { useState } from 'react'
 
 import { Card, Descricao, Titulo, Botao } from './styles'
-// import { ImageContainer } from './modal'
 import Modal from './modal'
 
 type Props = {
@@ -13,7 +12,7 @@ type Props = {
   porcao?: string
 }
 
-const Pratos = ({ foto, nome, descricao, preco, porcao }: Props) => {
+const Pratos = ({ foto, id, nome, descricao, preco, porcao }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const openModal = () => setIsModalOpen(true)
@@ -32,6 +31,10 @@ const Pratos = ({ foto, nome, descricao, preco, porcao }: Props) => {
         onClose={closeModal}
         title={nome}
         preco={preco}
+        id={id}
+        foto={foto}
+        descricao={descricao}
+        porcao={porcao || 'Porção individual'}
       >
         <div>
           <img src={foto} alt={nome} />
@@ -52,7 +55,7 @@ const Pratos = ({ foto, nome, descricao, preco, porcao }: Props) => {
               margin: '16px 8px 16px'
             }}
           >
-            Serve: {porcao}
+            Serve: {porcao || 'Porção individual'}
           </p>
         </div>
       </Modal>

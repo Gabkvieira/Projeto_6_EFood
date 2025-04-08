@@ -2,10 +2,10 @@ import styled from 'styled-components'
 import { cores } from '../../styles'
 
 export const Card = styled.div`
-  background-color: ${cores.fundoTag};
+  background-color: ${cores.salmao};
   height: 480px;
   position: relative;
-  color: ${cores.textoTag};
+  color: ${cores.beje};
   margin-bottom: 32px;
 
   display: flex;
@@ -60,9 +60,9 @@ export const Infos = styled.div`
   right: 16px;
 `
 export const Botao = styled.button`
-  background-color: ${cores.textoTag};
-  border: 2px solid ${cores.textoTag};
-  color: ${cores.fundoTag};
+  background-color: ${cores.beje};
+  border: 2px solid ${cores.beje};
+  color: ${cores.salmao};
   font-size: 14px;
   line-height: 16.41px;
   font-weight: 700;
