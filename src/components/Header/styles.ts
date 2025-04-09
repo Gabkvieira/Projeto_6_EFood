@@ -40,6 +40,7 @@ export const Links = styled.ul`
 `
 
 export const LinkItem = styled.li`
+  cursor: pointer;
   margin-right: 365px;
 
   @media only screen and (max-width: 767px) {
@@ -58,6 +59,6 @@ export const LinkItem = styled.li`
   }
 
   img {
-    margin-right: -105px;
+    margin-right: -108px;
   }
 `

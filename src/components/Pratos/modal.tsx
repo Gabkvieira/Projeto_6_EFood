@@ -1,6 +1,9 @@
 import React from 'react'
 import styled from 'styled-components'
 import { cores } from '../../styles'
+import { useDispatch } from 'react-redux'
+import { add, open } from '../../store/reducers/cart'
+import { formatPrice } from '../../utils'
 
 type ModalProps = {
   isOpen: boolean
@@ -92,10 +95,10 @@ const ImageContainer = styled.div`
     }
   }
 
-    @media only screen and (max-width: 767px) {
-      margin-left: 0;
-    }
+  @media only screen and (max-width: 767px) {
+    margin-left: 0;
   }
+}
 `
 const ContentContainer = styled.div`
   flex: 1;
@@ -125,8 +128,19 @@ const ActionButton = styled.button`
   }
 `
 
-const Modal = ({ isOpen, onClose, title, children, preco }: ModalProps) => {
-  preco = preco ? parseFloat(preco).toFixed(2) : '0.00'
+const Modal = ({
+  isOpen,
+  onClose,
+  title,
+  children,
+  preco,
+  id,
+  foto,
+  descricao,
+  porcao
+}: ModalProps) => {
+  const dispatch = useDispatch()
+
   if (!isOpen) return null
 
   let childImage: React.ReactNode = null
@@ -154,6 +168,23 @@ const Modal = ({ isOpen, onClose, title, children, preco }: ModalProps) => {
     }
   }
 
+  const handleAddToCart = () => {
+    if (preco) {
+      dispatch(
+        add({
+          id,
+          nome: title,
+          foto,
+          descricao,
+          preco,
+          porcao
+        })
+      )
+      dispatch(open())
+      onClose()
+    }
+  }
+
   return (
     <ModalOverlay onClick={onClose}>
       <ModalContainer onClick={(e) => e.stopPropagation()}>
@@ -167,8 +198,8 @@ const Modal = ({ isOpen, onClose, title, children, preco }: ModalProps) => {
             <ContentContainer>
               <ModalTitle>{title}</ModalTitle>
               {childContent}
-              <ActionButton onClick={onClose}>
-                Adicionar ao carrinho - R$ {preco}
+              <ActionButton onClick={handleAddToCart}>
+                Adicionar ao carrinho - {formatPrice(preco || '0')}
               </ActionButton>
             </ContentContainer>
           </ModalContent>

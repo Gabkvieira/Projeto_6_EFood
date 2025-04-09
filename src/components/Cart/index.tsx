@@ -8,7 +8,6 @@ import {
   CartContainer,
   Sidebar,
   Prices,
-  Quantity,
   CartItem,
   CartItemInfo,
   CartItemTitle,
@@ -64,16 +63,12 @@ const Cart = () => {
                   <RemoveButton
                     onClick={() => removeItem(item.id)}
                     type="button"
-                  >
-                    &times;
-                  </RemoveButton>
+                  ></RemoveButton>
                 </CartItem>
               ))}
             </ul>
-            <Quantity>{items.length} produto(s) no carrinho</Quantity>
             <Prices>
-              Valor total: {formatPrice(getTotalPrice())}
-              {/* <span>Entrega grátis</span> */}
+              Valor total <span>{formatPrice(getTotalPrice())}</span>
             </Prices>
             <CheckoutButton onClick={handleCheckout}>
               Continuar com a entrega

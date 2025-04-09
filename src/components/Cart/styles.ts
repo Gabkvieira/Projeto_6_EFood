@@ -1,7 +1,6 @@
 import styled from 'styled-components'
 import { cores } from '../../styles'
-
-import closeIcon from '../../assets/images/fechar.png'
+import closeIcon from '../../assets/images/lixeira.png'
 
 export const Overlay = styled.div`
   position: absolute;
@@ -21,7 +20,7 @@ export const CartContainer = styled.div`
   height: 100%;
   display: none;
   justify-content: flex-end;
-  z-index: 1;
+  z-index: 1000;
 
   &.is-open {
     display: flex;
@@ -31,9 +30,10 @@ export const CartContainer = styled.div`
 export const Sidebar = styled.aside`
   background-color: ${cores.salmao};
   z-index: 1;
-  padding: 40px 16px 0 16px;
+  padding: 32px 8px;
   max-width: 360px;
   width: 100%;
+  overflow-y: auto;
 
   @media only screen and (max-width: 767px) {
     width: 80%;
@@ -41,83 +41,99 @@ export const Sidebar = styled.aside`
 
   h2 {
     color: ${cores.beje};
-    margin-left: 115px;
-
-    @media only screen and (max-width: 767px) {
-      margin-left: 100px;
-    }
+    font-size: 24px;
+    font-weight: 700;
+    margin-bottom: 24px;
+    text-align: center;
   }
 `
 
-export const CheckoutButton = styled.button`
-  max-width: 100%;
-  width: 100%;
-`
-
-export const EmptyCartMessage = styled.p`
-  font-size: 14px;
-  line-height: 22px;
-  color: ${cores.beje};
-  text-align: center;
-  margin-top: 50px;
-`
-
 export const Prices = styled.p`
-  font-weight: bold;
+  font-weight: 700;
   font-size: 14px;
   color: ${cores.beje};
   margin-bottom: 24px;
-`
-
-export const CartItemPrice = styled.span`
-  display: block;
-  font-size: 12px;
-  color: ${cores.cinzaClaro};
-`
-
-export const Quantity = styled.p`
-  font-weight: bold;
-  font-size: 16px;
-  color: ${cores.beje};
-  margin-top: 32px;
-  margin-bottom: 16px;
-`
-
-export const CartItem = styled.li`
+  margin-top: 40px;
   display: flex;
-  border-bottom: 1px solid ${cores.cinzaClaro};
-  padding: 8px 0;
-  position: relative;
+
+  span {
+    position: absolute;
+    right: 8px;
+  }
+`
+export const CartItem = styled.li`
   background-color: ${cores.beje};
+  display: flex;
+  border-bottom: 1px solid ${cores.beje};
+  position: relative;
+  margin-bottom: 16px;
+  height: 100px;
 
   img {
     height: 80px;
     width: 80px;
     object-fit: cover;
-    margin-right: 24px;
+    margin-top: 8px;
+    margin-right: 8px;
+    margin-left: 8px;
   }
 `
 
-export const CartItemInfo = styled.span`
-  display: block;
-  color: ${cores.branca};
-  font-weight: bold;
-  font-size: 14px;
+export const CartItemInfo = styled.div`
+  flex: 1;
 `
 
 export const CartItemTitle = styled.h3`
-  color: ${cores.branca};
-  font-weight: bold;
-  font-size: 16px;
+  color: ${cores.salmao};
+  font-weight: 900;
+  font-size: 18px;
+  margin-bottom: 16px;
+  margin-top: 8px;
+`
+
+export const CartItemPrice = styled.span`
+  display: block;
+  color: ${cores.salmao};
+  font-weight: 400;
+  font-size: 14px;
+  margin-bottom: 8px;
 `
 
 export const RemoveButton = styled.button`
   background-image: url(${closeIcon});
+  background-color: transparent;
   width: 16px;
   height: 16px;
   border: none;
-  background-color: transparent;
+  font-size: 24px;
+  cursor: pointer;
   position: absolute;
-  top: 8px;
-  right: 0;
+  bottom: 8px;
+  right: 8px;
+`
+
+export const CheckoutButton = styled.button`
+  background-color: ${cores.beje};
+  color: ${cores.salmao};
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  width: 344px;
+  cursor: pointer;
+  height: 24px;
+
+  @media only screen and (max-width: 767px) {
+    width: 100%;
+  }
+
+  &:hover {
+    opacity: 0.8;
+  }
+`
+
+export const EmptyCartMessage = styled.p`
+  color: ${cores.beje};
+  font-size: 16px;
+  text-align: center;
+  margin: 32px 0;
 `

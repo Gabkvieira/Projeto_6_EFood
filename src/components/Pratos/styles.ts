@@ -34,7 +34,6 @@ export const Titulo = styled.h3`
   font-weight: 900;
   font-size: 16px;
   display: block;
-  margin-top: 8px;
   margin-left: 16px;
   align-self: flex-start;
 `
@@ -68,7 +67,6 @@ export const Botao = styled.button`
   font-weight: 700;
   width: 95%;
   height: 24px;
-  align-itens: center;
   margin-left: 0;
   cursor: pointer;
   margin-bottom: 8px;

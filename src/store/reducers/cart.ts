@@ -5,7 +5,7 @@ type MenuItem = {
   nome: string
   foto: string
   descricao: string
-  preco: number
+  preco: string
   porcao: string
 }
 
