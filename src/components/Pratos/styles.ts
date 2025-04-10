@@ -36,6 +36,8 @@ export const Titulo = styled.h3`
   display: block;
   margin-left: 16px;
   align-self: flex-start;
+  margin-bottom: 8px;
+  margin-top: 8px;
 `
 
 export const Descricao = styled.p`
