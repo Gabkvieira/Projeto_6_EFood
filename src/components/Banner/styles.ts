@@ -29,6 +29,7 @@ export const Titulo = styled.h2`
 
   @media only screen and (max-width: 767px) {
     margin-left: 16px;
+    margin-top: 128px;
   }
 `
 export const Paragrafo = styled.h2`

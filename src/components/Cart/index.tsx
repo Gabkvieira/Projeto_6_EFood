@@ -48,7 +48,8 @@ const Cart = () => {
         <h2>Carrinho</h2>
         {items.length === 0 ? (
           <EmptyCartMessage>
-            O carrinho está vazio. Adicione itens para continuar.
+            <p>O carrinho está vazio.</p>
+            <p>Adicione itens para continuar.</p>
           </EmptyCartMessage>
         ) : (
           <>
