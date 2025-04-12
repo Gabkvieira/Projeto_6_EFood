@@ -13,8 +13,6 @@ export const HeaderBar = styled.header`
   a {
     color: ${cores.salmao};
     text-decoration: none;
-    font-weight: bold;
-    font-size: 18px;
   }
 `
 
@@ -24,11 +22,14 @@ export const Links = styled.ul`
   align-items: center;
   margin-left: -80px;
 
+  @media only screen and (max-width: 767px) {
+    margin-left: 0px;
+  }
+
   img {
     margin-left: 50px;
     @media only screen and (max-width: 767px) {
-      margin-left: -100px;
-      margin-top: 0px;
+      margin-left: 0px;
     }
   }
 
@@ -51,7 +52,7 @@ export const LinkItem = styled.li`
   p {
     width: 232%;
     font-size: 18px;
-    font-weight: bold;
+    font-weight: 900;
 
     @media only screen and (max-width: 767px) {
       width: 100%;
@@ -60,5 +61,9 @@ export const LinkItem = styled.li`
 
   img {
     margin-right: -108px;
+
+    @media only screen and (max-width: 767px) {
+      margin-right: 0px;
+    }
   }
 `

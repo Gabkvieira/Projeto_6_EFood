@@ -10,6 +10,11 @@ export const Card = styled.div`
   height: 425px;
   width: 472px;
 
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
   img {
     width: 100%;
     height: 217px;
@@ -27,18 +32,19 @@ export const Card = styled.div`
 `
 
 export const Titulo = styled.h3`
+  align-self: flex-start;
   font-weight: 700;
   font-size: 18px;
-  display: block;
   margin-top: 8px;
   margin-left: 7px;
   line-height: 21.09px;
 `
 
 export const Descricao = styled.p`
+  align-self: flex-start;
+  font-weight: 400;
   font-size: 14px;
   line-height: 22px;
-  display: block;
   margin-top: 16px;
   margin-left: 8px;
   width: 456px;
@@ -58,6 +64,7 @@ export const Infos = styled.div`
   right: 8px;
 `
 export const Botao = styled.button`
+  align-self: flex-start;
   background-color: ${cores.salmao};
   border: 2px solid ${cores.salmao};
   font-size: 14px;
@@ -66,6 +73,7 @@ export const Botao = styled.button`
   height: 24px;
   width: 82px;
   margin-left: 8px;
+  margin-bottom: 8px;
 
   a {
     text-decoration: none;
@@ -76,7 +84,7 @@ export const Botao = styled.button`
 export const Nota = styled.div`
   position: absolute;
   top: 226px;
-  right: 37px;
+  right: 30px;
   font-weight: 700;
   font-size: 18px;
 
@@ -86,7 +94,7 @@ export const Nota = styled.div`
 `
 export const LogoEstrela = styled.div`
   position: relative;
-  top: -138px;
+  top: -140px;
   margin-left: 440px;
 
   img {
@@ -95,7 +103,7 @@ export const LogoEstrela = styled.div`
   }
 
   @media only screen and (max-width: 767px) {
-    top: -181px;
+    top: -184px;
     margin-left: 93%;
   }
 `

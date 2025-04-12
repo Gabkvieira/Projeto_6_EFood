@@ -17,8 +17,3 @@ export const List = styled.ul`
     margin-top: 20px;
   }
 `
-
-export const Title = styled.h2`
-  font-size: 18px;
-  font-weight: bold;
-`
