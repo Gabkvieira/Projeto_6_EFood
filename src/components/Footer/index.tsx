@@ -35,8 +35,8 @@ const Footer = () => (
       </FooterSection>
       <div className="texto-footer">
         A efood é uma plataforma para divulgação de estabelecimentos, a
-        responsabilidade pela entrega, qualidade
-        <p>dos produtos é toda do estabelecimento contratado.</p>
+        responsabilidade pela entrega
+        <p> e qualidade dos produtos é toda do estabelecimento contratado.</p>
       </div>
     </div>
   </Container>
