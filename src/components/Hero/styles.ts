@@ -27,7 +27,7 @@ export const Titulo = styled.h2`
   font-size: 36px;
   margin-top: 138.5px;
   text-align: center;
-  font-weight: bold;
+  font-weight: 900;
 
   @media only screen and (max-width: 767px) {
     margin-top: 80px;
