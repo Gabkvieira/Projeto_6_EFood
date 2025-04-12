@@ -2,37 +2,35 @@ import styled from 'styled-components'
 
 export const Imagem = styled.div`
   height: 384px;
-  display: block;
-  background-repeat: no-repeat;
+  width: 100%;
   background-size: cover;
+  background-position: center;
+  display: flex;
+  justify-content: center;
+
+  .container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 16px;
+  }
+`
+
+export const Logo = styled.img`
+  height: 58px;
+  width: 125px;
+  margin-top: 40px;
+`
+
+export const Titulo = styled.h2`
+  font-size: 36px;
+  margin-top: 138.5px;
+  text-align: center;
   font-weight: bold;
 
   @media only screen and (max-width: 767px) {
-    width: 100%;
-  }
-
-  img {
-    height: 57.5px;
-    width: 125px;
-    margin-top: 40px;
-    margin-left: 445px;
-
-    @media only screen and (max-width: 767px) {
-      margin-left: 150px;
-    }
-  }
-`
-export const Titulo = styled.h2`
-  font-size: 36px;
-  max-width: 539px;
-  margin-top: 150px;
-  margin-left: 230px;
-  text-align: center;
-
-  @media only screen and (max-width: 767px) {
+    margin-top: 80px;
     font-size: 30px;
-    width: 80%;
-    margin-top: 75px;
-    margin-left: 40px;
   }
 `

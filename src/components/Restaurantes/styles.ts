@@ -96,6 +96,6 @@ export const LogoEstrela = styled.div`
 
   @media only screen and (max-width: 767px) {
     top: -181px;
-    margin-left: 360px;
+    margin-left: 93%;
   }
 `

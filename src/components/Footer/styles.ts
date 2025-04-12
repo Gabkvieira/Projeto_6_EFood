@@ -5,33 +5,30 @@ export const Container = styled.footer`
   font-size: 10px;
   margin-top: 120px;
 
-  @media only screen and (max-width: 767px) {
+    .container {
     width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    @media only screen and (max-width: 767px) {
+    width: 90%;
   }
 
   p {
-    text-align: center;
+    margin-bottom: 40px;
   }
 
   .logo {
     img {
-      margin-left: 445px;
       margin-top: 40px;
-
-      @media only screen and (max-width: 767px) {
-        margin-left: 145px;
-      }
     }
   }
 `
 export const Links = styled.ul`
   display: flex;
-  margin-top: -48px;
-  margin-left: 460px;
-
-  @media only screen and (max-width: 767px) {
-    margin-left: 165px;
-  }
+  margin-top: -32px;
 `
 
 export const Link = styled.a`
