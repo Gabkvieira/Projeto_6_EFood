@@ -52,7 +52,7 @@ export const Descricao = styled.p`
 
   @media only screen and (max-width: 767px) {
     width: 90%;
-    margin-left: 0px;
+    margin-left: -8px;
   }
 `
 
