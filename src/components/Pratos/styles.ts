@@ -23,32 +23,37 @@ export const Card = styled.div`
     margin-top: 8px;
     width: 95%;
     height: 217px;
-
-    @media only screen and (max-width: 767px) {
-      width: 95%;
-    }
   }
 `
 
 export const Titulo = styled.h3`
   font-weight: 900;
   font-size: 16px;
-  margin-left: 16px;
+  margin-left: 8px;
   align-self: flex-start;
   margin-bottom: 8px;
   margin-top: 8px;
+
+  @media only screen and (max-width: 767px) {
+    margin-left: 16px;
+  }
 `
 
 export const Descricao = styled.p`
   align-self: flex-start;
   font-size: 14px;
   line-height: 22px;
-  width: 90%;
+  width: 95%;
   font-weight: 400;
   margin-bottom: 8px;
   text-align: justify;
   min-height: 176px;
-  margin-left: 16px;
+  margin-left: 8px;
+
+  @media only screen and (max-width: 767px) {
+    width: 90%;
+    margin-left: 16px;
+  }
 `
 
 export const Infos = styled.div`
