@@ -41,6 +41,7 @@ export const Titulo = styled.h3`
 `
 
 export const Descricao = styled.p`
+  align-self: flex-start;
   font-size: 14px;
   line-height: 22px;
   display: block;
@@ -49,11 +50,7 @@ export const Descricao = styled.p`
   margin-bottom: 8px;
   text-align: justify;
   min-height: 176px;
-
-  @media only screen and (max-width: 767px) {
-    width: 90%;
-    margin-left: -8px;
-  }
+  margin-left: 16px;
 `
 
 export const Infos = styled.div`
