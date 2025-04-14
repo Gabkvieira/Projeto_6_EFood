@@ -1,4 +1,5 @@
 import { useDispatch, useSelector } from 'react-redux'
+
 import { RootReducer } from '../../store'
 import { close, remove, clear } from '../../store/reducers/cart'
 import { formatPrice } from '../../utils'

@@ -48,6 +48,7 @@ export const Descricao = styled.p`
   font-weight: 400;
   margin-bottom: 8px;
   text-align: justify;
+  min-height: 176px;
 
   @media only screen and (max-width: 767px) {
     width: 90%;
