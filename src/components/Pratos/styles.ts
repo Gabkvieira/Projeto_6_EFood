@@ -33,7 +33,6 @@ export const Card = styled.div`
 export const Titulo = styled.h3`
   font-weight: 900;
   font-size: 16px;
-  display: block;
   margin-left: 16px;
   align-self: flex-start;
   margin-bottom: 8px;
@@ -44,7 +43,6 @@ export const Descricao = styled.p`
   align-self: flex-start;
   font-size: 14px;
   line-height: 22px;
-  display: block;
   width: 90%;
   font-weight: 400;
   margin-bottom: 8px;
