@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const Card = styled.div`
-  background-color: ${cores.salmao};
+  background-color: ${colors.salmon};
   height: 480px;
   position: relative;
-  color: ${cores.beje};
+  color: ${colors.beige};
   margin-bottom: 32px;
 
   display: flex;
@@ -26,7 +26,7 @@ export const Card = styled.div`
   }
 `
 
-export const Titulo = styled.h3`
+export const Title = styled.h3`
   font-weight: 900;
   font-size: 16px;
   margin-left: 8px;
@@ -39,7 +39,7 @@ export const Titulo = styled.h3`
   }
 `
 
-export const Descricao = styled.p`
+export const Description = styled.p`
   align-self: flex-start;
   font-size: 14px;
   line-height: 22px;
@@ -55,16 +55,10 @@ export const Descricao = styled.p`
     margin-left: 16px;
   }
 `
-
-export const Infos = styled.div`
-  position: absolute;
-  top: 16px;
-  right: 16px;
-`
-export const Botao = styled.button`
-  background-color: ${cores.beje};
-  border: 2px solid ${cores.beje};
-  color: ${cores.salmao};
+export const Button = styled.button`
+  background-color: ${colors.beige};
+  border: 2px solid ${colors.beige};
+  color: ${colors.salmon};
   font-size: 14px;
   line-height: 16.41px;
   font-weight: 700;

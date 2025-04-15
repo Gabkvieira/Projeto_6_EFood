@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const Imagem = styled.div`
+export const Image = styled.div`
   height: 384px;
   width: 100%;
   background-size: cover;
@@ -23,7 +23,7 @@ export const Logo = styled.img`
   margin-top: 40px;
 `
 
-export const Titulo = styled.h2`
+export const Title = styled.h2`
   font-size: 36px;
   margin-top: 138.5px;
   text-align: center;

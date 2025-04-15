@@ -1,6 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import { useDispatch } from 'react-redux'
 import { add, open } from '../../store/reducers/cart'
 import { formatPrice } from '../../utils'
@@ -31,7 +31,7 @@ const ModalOverlay = styled.div`
 `
 
 const ModalContainer = styled.div`
-  background-color: ${cores.salmao};
+  background-color: ${colors.salmon};
   // border-radius: 8px;
   padding: 0 8px 32px;
   max-width: 90%;
@@ -54,7 +54,7 @@ const ModalHeader = styled.div`
 const ModalTitle = styled.h3`
   font-size: 18px;
   font-weight: 900;
-  color: ${cores.branca};
+  color: ${colors.white};
   margin-bottom: 16px;
   margin-top: 8px;
   margin-left: 8px;
@@ -65,10 +65,10 @@ const CloseButton = styled.button`
   border: none;
   font-size: 32px;
   cursor: pointer;
-  color: ${cores.cinzaClaro};
+  color: ${colors.lightGray};
 
   &:hover {
-    color: ${cores.salmao};
+    color: ${colors.salmon};
   }
 `
 
@@ -112,8 +112,8 @@ const ModalActions = styled.div`
 `
 
 const ActionButton = styled.button`
-  background-color: ${cores.beje};
-  color: ${cores.salmao};
+  background-color: ${colors.beige};
+  color: ${colors.salmon};
   border: none;
   // border-radius: 4px;
   cursor: pointer;

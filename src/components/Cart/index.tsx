@@ -3,20 +3,7 @@ import { useDispatch, useSelector } from 'react-redux'
 import { RootReducer } from '../../store'
 import { close, remove, clear } from '../../store/reducers/cart'
 import { formatPrice } from '../../utils'
-
-import {
-  Overlay,
-  CartContainer,
-  Sidebar,
-  Prices,
-  CartItem,
-  CartItemInfo,
-  CartItemTitle,
-  CartItemPrice,
-  RemoveButton,
-  CheckoutButton,
-  EmptyCartMessage
-} from './styles'
+import * as S from './styles'
 
 const Cart = () => {
   const { isOpen, items } = useSelector((state: RootReducer) => state.cart)
@@ -43,42 +30,42 @@ const Cart = () => {
   }
 
   return (
-    <CartContainer className={isOpen ? 'is-open' : ''}>
-      <Overlay onClick={closeCart} />
-      <Sidebar>
+    <S.CartContainer className={isOpen ? 'is-open' : ''}>
+      <S.Overlay onClick={closeCart} />
+      <S.Sidebar>
         <h2>Carrinho</h2>
         {items.length === 0 ? (
-          <EmptyCartMessage>
+          <S.EmptyCartMessage>
             <p>O carrinho está vazio.</p>
             <p>Adicione itens para continuar.</p>
-          </EmptyCartMessage>
+          </S.EmptyCartMessage>
         ) : (
           <>
             <ul>
               {items.map((item) => (
-                <CartItem key={item.id}>
+                <S.CartItem key={item.id}>
                   <img src={item.foto} alt={item.nome} />
-                  <CartItemInfo>
-                    <CartItemTitle>{item.nome}</CartItemTitle>
-                    <CartItemPrice>{formatPrice(item.preco)}</CartItemPrice>
-                  </CartItemInfo>
-                  <RemoveButton
+                  <S.CartItemInfo>
+                    <S.CartItemTitle>{item.nome}</S.CartItemTitle>
+                    <S.CartItemPrice>{formatPrice(item.preco)}</S.CartItemPrice>
+                  </S.CartItemInfo>
+                  <S.RemoveButton
                     onClick={() => removeItem(item.id)}
                     type="button"
-                  ></RemoveButton>
-                </CartItem>
+                  ></S.RemoveButton>
+                </S.CartItem>
               ))}
             </ul>
-            <Prices>
+            <S.Prices>
               Valor total <span>{formatPrice(getTotalPrice())}</span>
-            </Prices>
-            <CheckoutButton onClick={handleCheckout}>
+            </S.Prices>
+            <S.CheckoutButton onClick={handleCheckout}>
               Continuar com a entrega
-            </CheckoutButton>
+            </S.CheckoutButton>
           </>
         )}
-      </Sidebar>
-    </CartContainer>
+      </S.Sidebar>
+    </S.CartContainer>
   )
 }
 

@@ -1,22 +1,22 @@
 import { Menu } from '../../pages/Home'
-import Pratos from '../Pratos'
+import Dishes from '../Dishes'
 
-import { Container, List } from './styles'
+import * as S from './styles'
 
 export type Props = {
-  restaurante: Menu
+  restaurant: Menu
 }
 
-const ListaPratos = ({ restaurante }: Props) => {
-  const cardapio = restaurante.cardapio
+const DishesList = ({ restaurant }: Props) => {
+  const restaurantMenu = restaurant.cardapio
 
   return (
-    <Container>
+    <S.Container>
       <div className="container">
-        <List>
-          {cardapio.map((menu) => (
+        <S.List>
+          {restaurantMenu.map((menu) => (
             <li key={menu.id}>
-              <Pratos
+              <Dishes
                 id={menu.id}
                 descricao={menu.descricao}
                 foto={menu.foto}
@@ -26,10 +26,10 @@ const ListaPratos = ({ restaurante }: Props) => {
               />
             </li>
           ))}
-        </List>
+        </S.List>
       </div>
-    </Container>
+    </S.Container>
   )
 }
 
-export default ListaPratos
+export default DishesList

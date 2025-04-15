@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const Container = styled.footer`
   font-size: 10px;
@@ -32,7 +32,7 @@ export const Links = styled.ul`
 `
 
 export const Link = styled.a`
-  color: ${cores.cinzaClaro};
+  color: ${colors.lightGray};
   text-decoration: none;
   margin-right: 8px;
 `

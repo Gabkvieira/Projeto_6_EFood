@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
 export const HeaderBar = styled.header`
   display: flex;
@@ -11,7 +11,7 @@ export const HeaderBar = styled.header`
   }
 
   a {
-    color: ${cores.salmao};
+    color: ${colors.salmon};
     text-decoration: none;
   }
 `

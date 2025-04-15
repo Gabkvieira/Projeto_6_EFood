@@ -1,6 +1,6 @@
 import { useState } from 'react'
 
-import { Card, Descricao, Titulo, Botao } from './styles'
+import * as S from './styles'
 import Modal from './modal'
 
 type Props = {
@@ -19,12 +19,12 @@ const Pratos = ({ foto, id, nome, descricao, preco, porcao }: Props) => {
   const closeModal = () => setIsModalOpen(false)
 
   return (
-    <Card>
+    <S.Card>
       <img src={foto} alt={nome} />
-      <Titulo>{nome}</Titulo>
-      <Descricao>{descricao}</Descricao>
+      <S.Title>{nome}</S.Title>
+      <S.Description>{descricao}</S.Description>
 
-      <Botao onClick={openModal}>Mais detalhes</Botao>
+      <S.Button onClick={openModal}>Mais detalhes</S.Button>
 
       <Modal
         isOpen={isModalOpen}
@@ -59,7 +59,7 @@ const Pratos = ({ foto, id, nome, descricao, preco, porcao }: Props) => {
           </p>
         </div>
       </Modal>
-    </Card>
+    </S.Card>
   )
 }
 

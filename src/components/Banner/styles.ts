@@ -1,7 +1,7 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 
-export const Imagem = styled.div`
+export const Image = styled.div`
   width: 100%;
   height: 280px;
   display: block;
@@ -20,9 +20,9 @@ export const Imagem = styled.div`
     align-items: flex-end;
   }
 `
-export const Titulo = styled.h2`
+export const Title = styled.h2`
   font-size: 32px;
-  color: ${cores.branca};
+  color: ${colors.white};
   margin-top: 140px;
   margin-left: 0px;
   font-weight: bold;
@@ -32,9 +32,9 @@ export const Titulo = styled.h2`
     margin-top: 128px;
   }
 `
-export const Paragrafo = styled.h2`
+export const Paragraph = styled.h2`
   font-size: 32px;
-  color: ${cores.branca};
+  color: ${colors.white};
   margin-top: -310px;
   font-weight: 100;
 

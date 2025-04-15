@@ -1,5 +1,5 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import closeIcon from '../../assets/images/lixeira.png'
 
 export const Overlay = styled.div`
@@ -28,7 +28,7 @@ export const CartContainer = styled.div`
 `
 
 export const Sidebar = styled.aside`
-  background-color: ${cores.salmao};
+  background-color: ${colors.salmon};
   z-index: 1;
   padding: 32px 8px;
   max-width: 360px;
@@ -40,7 +40,7 @@ export const Sidebar = styled.aside`
   }
 
   h2 {
-    color: ${cores.beje};
+    color: ${colors.beige};
     font-size: 24px;
     font-weight: 700;
     margin-bottom: 24px;
@@ -51,7 +51,7 @@ export const Sidebar = styled.aside`
 export const Prices = styled.p`
   font-weight: 700;
   font-size: 14px;
-  color: ${cores.beje};
+  color: ${colors.beige};
   margin-bottom: 24px;
   margin-top: 40px;
   display: flex;
@@ -62,9 +62,9 @@ export const Prices = styled.p`
   }
 `
 export const CartItem = styled.li`
-  background-color: ${cores.beje};
+  background-color: ${colors.beige};
   display: flex;
-  border-bottom: 1px solid ${cores.beje};
+  border-bottom: 1px solid ${colors.beige};
   position: relative;
   margin-bottom: 16px;
   height: 100px;
@@ -84,7 +84,7 @@ export const CartItemInfo = styled.div`
 `
 
 export const CartItemTitle = styled.h3`
-  color: ${cores.salmao};
+  color: ${colors.salmon};
   font-weight: 900;
   font-size: 18px;
   margin-bottom: 16px;
@@ -93,7 +93,7 @@ export const CartItemTitle = styled.h3`
 
 export const CartItemPrice = styled.span`
   display: block;
-  color: ${cores.salmao};
+  color: ${colors.salmon};
   font-weight: 400;
   font-size: 14px;
   margin-bottom: 8px;
@@ -113,8 +113,8 @@ export const RemoveButton = styled.button`
 `
 
 export const CheckoutButton = styled.button`
-  background-color: ${cores.beje};
-  color: ${cores.salmao};
+  background-color: ${colors.beige};
+  color: ${colors.salmon};
   border: none;
   font-size: 14px;
   font-weight: 700;
@@ -132,7 +132,7 @@ export const CheckoutButton = styled.button`
 `
 
 export const EmptyCartMessage = styled.p`
-  color: ${cores.beje};
+  color: ${colors.beige};
   font-size: 16px;
   text-align: center;
   margin: 32px 0;

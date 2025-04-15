@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom'
-
-import { HeaderBar, Links, LinkItem } from './styles'
 import { useDispatch, useSelector } from 'react-redux'
+
 import { RootReducer } from '../../store'
 import { open } from '../../store/reducers/cart'
-
+import * as S from './styles'
 import logo from '../../assets/images/logo.svg'
 import fundo from '../../assets/images/fundo.png'
 
@@ -17,27 +16,27 @@ const Header = () => {
   }
 
   return (
-    <HeaderBar style={{ backgroundImage: `url(${fundo})` }}>
+    <S.HeaderBar style={{ backgroundImage: `url(${fundo})` }}>
       <div className="container">
         <nav>
-          <Links>
-            <LinkItem>
+          <S.Links>
+            <S.LinkItem>
               <Link to="/">
                 <p>Restaurantes</p>
               </Link>
-            </LinkItem>
-            <LinkItem>
+            </S.LinkItem>
+            <S.LinkItem>
               <Link to="/">
                 <img src={logo} alt="EFood" />
               </Link>
-            </LinkItem>
-            <LinkItem onClick={openCart}>
+            </S.LinkItem>
+            <S.LinkItem onClick={openCart}>
               <p>{items.length} produto(s) no carrinho</p>
-            </LinkItem>
-          </Links>
+            </S.LinkItem>
+          </S.Links>
         </nav>
       </div>
-    </HeaderBar>
+    </S.HeaderBar>
   )
 }
 export default Header

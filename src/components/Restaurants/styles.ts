@@ -1,11 +1,11 @@
 import styled from 'styled-components'
-import { cores } from '../../styles'
+import { colors } from '../../styles'
 import { TagContainer } from '../Tag/styles'
 
 export const Card = styled.div`
-  background-color: ${cores.branca};
+  background-color: ${colors.white};
   position: relative;
-  border: solid 1px ${cores.salmao};
+  border: solid 1px ${colors.salmon};
   margin-bottom: 48px;
   height: 425px;
   width: 472px;
@@ -31,7 +31,7 @@ export const Card = styled.div`
   }
 `
 
-export const Titulo = styled.h3`
+export const Title = styled.h3`
   align-self: flex-start;
   font-weight: 700;
   font-size: 18px;
@@ -40,7 +40,7 @@ export const Titulo = styled.h3`
   line-height: 21.09px;
 `
 
-export const Descricao = styled.p`
+export const Description = styled.p`
   align-self: flex-start;
   font-weight: 400;
   font-size: 14px;
@@ -58,15 +58,15 @@ export const Descricao = styled.p`
   }
 `
 
-export const Infos = styled.div`
+export const Info = styled.div`
   position: absolute;
   top: 16px;
   right: 8px;
 `
-export const Botao = styled.button`
+export const Button = styled.button`
   align-self: flex-start;
-  background-color: ${cores.salmao};
-  border: 2px solid ${cores.salmao};
+  background-color: ${colors.salmon};
+  border: 2px solid ${colors.salmon};
   font-size: 14px;
   line-height: 16.41px;
   font-weight: 700;
@@ -77,11 +77,11 @@ export const Botao = styled.button`
 
   a {
     text-decoration: none;
-    color: ${cores.beje};
+    color: ${colors.beige};
   }
 `
 
-export const Nota = styled.div`
+export const Rating = styled.div`
   position: absolute;
   top: 226px;
   right: 30px;
@@ -92,7 +92,7 @@ export const Nota = styled.div`
     top: 227px;
   }
 `
-export const LogoEstrela = styled.div`
+export const StarLogo = styled.div`
   position: relative;
   top: -140px;
   margin-left: 440px;
