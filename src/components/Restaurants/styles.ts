@@ -44,10 +44,16 @@ export const Card = styled.div`
     margin-left: 3.5%;
   }
 
-  @media only screen and (min-width: 768px) and (max-width: 1023px) and (max-height: 500px) {
+  @media only screen and (min-width: 768px) and (max-width: 900px) and (max-height: 500px) {
     width: 350px;
     height: 500px;
-    margin-left: 10%;
+    margin-left: 8%;
+  }
+
+  @media only screen and (min-width: 901px) and (max-width: 1023px) and (max-height: 500px) {
+    width: 350px;
+    height: 500px;
+    margin-left: 2%;
   }
 
   @media only screen and (min-width: 1024px) and (max-width: 1200px) {

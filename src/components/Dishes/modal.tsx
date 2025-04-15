@@ -45,8 +45,8 @@ const ModalContainer = styled.div`
     max-height: 90vh;
   }
 
-  @media only screen and (min-width: 501px) and (max-width: 767px) {
-    max-height: 90vh;
+  @media only screen and (min-width: 768px) and (max-height: 500px) {
+    max-height: 100vh;
   }
 `
 
