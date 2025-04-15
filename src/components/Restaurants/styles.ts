@@ -70,7 +70,7 @@ export const Title = styled.h3`
   font-weight: 700;
   font-size: 18px;
   margin-top: 8px;
-  margin-left: 8px;
+  margin-left: 7px;
   line-height: 21.09px;
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {

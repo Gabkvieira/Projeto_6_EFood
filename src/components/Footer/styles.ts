@@ -28,15 +28,16 @@ export const Container = styled.footer`
 `
 export const Links = styled.ul`
   display: flex;
-  margin-top: -32px;
+  cursor: pointer;
+
+  li {
+    margin-top: 32.5px;
+    margin-bottom: 80px;
+  }
 `
 
 export const Link = styled.a`
   color: ${colors.lightGray};
   text-decoration: none;
   margin-right: 8px;
-`
-
-export const FooterSection = styled.div`
-  margin-bottom: 80px;
 `
