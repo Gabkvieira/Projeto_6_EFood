@@ -31,6 +31,16 @@ export const Title = styled.h2`
     margin-left: 16px;
     margin-top: 128px;
   }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-left: 16px;
+    margin-top: 128px;
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    margin-left: 16px;
+    margin-top: 128px;
+  }
 `
 export const Paragraph = styled.h2`
   font-size: 32px;
@@ -39,6 +49,14 @@ export const Paragraph = styled.h2`
   font-weight: 100;
 
   @media only screen and (max-width: 767px) {
+    margin-left: 16px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-left: 16px;
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
     margin-left: 16px;
   }
 `

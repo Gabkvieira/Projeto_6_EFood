@@ -13,10 +13,26 @@ export const Card = styled.div`
   justify-content: space-between;
   align-items: center;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 500px) {
     width: 95%;
     margin-left: 8px;
     height: 475px;
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    width: 90%;
+    margin-left: 4%;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 90%;
+    margin-left: 4%;
+  }
+
+  @media only screen and (min-width: 501px) and (max-width: 767px) {
+    margin-left: 9%;
+    width: 80%;
+    height: 450px;
   }
 
   img {
@@ -70,5 +86,9 @@ export const Button = styled.button`
 
   @media only screen and (max-width: 767px) {
     width: 90%;
+  }
+
+  @media only screen and (min-width: 501px) and (max-width: 767px) {
+    margin-top: -8%;
   }
 `

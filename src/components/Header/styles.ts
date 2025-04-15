@@ -22,13 +22,32 @@ export const Links = styled.ul`
   align-items: center;
   margin-left: -80px;
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    margin-left: -60px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-left: -65px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) and (min-height: 501px) and (max-height: 1050px) {
+    margin-left: -40px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-height: 500px) {
     margin-left: 0px;
+    margin-top: 32px;
+    display: block;
   }
 
   img {
     margin-left: 50px;
+
     @media only screen and (max-width: 767px) {
+      margin-left: 0px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-height: 500px) {
       margin-left: 0px;
     }
   }
@@ -49,6 +68,23 @@ export const LinkItem = styled.li`
     margin-right: 0px;
   }
 
+  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    margin-right: 340px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    margin-right: 240px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-height: 500px) {
+    margin-bottom: 16px;
+    margin-right: 0px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) and (min-height: 501px) and (max-height: 1050px) {
+    margin-right: 200px;
+  }
+
   p {
     width: 232%;
     font-size: 18px;
@@ -57,12 +93,20 @@ export const LinkItem = styled.li`
     @media only screen and (max-width: 767px) {
       width: 100%;
     }
+
+    @media only screen and (min-width: 768px) and (max-height: 500px) {
+      width: 100%;
+    }
   }
 
   img {
     margin-right: -108px;
 
     @media only screen and (max-width: 767px) {
+      margin-right: 0px;
+    }
+
+    @media only screen and (min-width: 768px) and (max-height: 500px) {
       margin-right: 0px;
     }
   }

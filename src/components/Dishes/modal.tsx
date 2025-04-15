@@ -1,7 +1,8 @@
 import React from 'react'
-import styled from 'styled-components'
-import { colors } from '../../styles'
 import { useDispatch } from 'react-redux'
+import styled from 'styled-components'
+
+import { colors } from '../../styles'
 import { add, open } from '../../store/reducers/cart'
 import { formatPrice } from '../../utils'
 
@@ -43,6 +44,10 @@ const ModalContainer = styled.div`
   @media only screen and (max-width: 767px) {
     max-height: 90vh;
   }
+
+  @media only screen and (min-width: 501px) and (max-width: 767px) {
+    max-height: 90vh;
+  }
 `
 
 const ModalHeader = styled.div`
@@ -79,6 +84,10 @@ const ModalContent = styled.div`
   @media only screen and (max-width: 767px) {
     display: block;
   }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    display: block;
+  }
 `
 
 const ImageContainer = styled.div`
@@ -93,6 +102,16 @@ const ImageContainer = styled.div`
       width: 100%;
       border-radius: 8px;
     }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 102%;
+    margin-left: -25px;
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    width: 100%;
+    margin-left: -24px;
+  }
   }
 
   @media only screen and (max-width: 767px) {

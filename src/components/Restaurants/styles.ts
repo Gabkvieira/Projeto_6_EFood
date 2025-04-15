@@ -20,10 +20,38 @@ export const Card = styled.div`
     height: 217px;
   }
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 500px) {
     width: 95%;
     margin-left: 8px;
     height: 470px;
+  }
+
+  @media only screen and (min-width: 501px) and (max-width: 767px) {
+    margin-left: 9%;
+    width: 80%;
+    height: 450px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 350px;
+    height: 500px;
+    margin-left: 5.5%;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) and (min-height: 501px) and (max-height: 1050px) {
+    width: 350px;
+    height: 500px;
+    margin-left: 3.5%;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) and (max-height: 500px) {
+    width: 350px;
+    height: 500px;
+    margin-left: 10%;
+  }
+
+  @media only screen and (min-width: 1024px) and (max-width: 1200px) {
+    margin-left: 2%;
   }
 
   ${TagContainer} {
@@ -36,8 +64,13 @@ export const Title = styled.h3`
   font-weight: 700;
   font-size: 18px;
   margin-top: 8px;
-  margin-left: 7px;
+  margin-left: 8px;
   line-height: 21.09px;
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 95%;
+    margin-top: -5%;
+  }
 `
 
 export const Description = styled.p`
@@ -55,6 +88,11 @@ export const Description = styled.p`
   @media only screen and (max-width: 767px) {
     width: 95%;
     margin-bottom: 52px;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    width: 95%;
+    margin-top: -5%;
   }
 `
 
@@ -75,6 +113,10 @@ export const Button = styled.button`
   margin-left: 8px;
   margin-bottom: 8px;
 
+  @media only screen and (min-width: 501px) and (max-width: 767px) {
+    margin-top: -3%;
+  }
+
   a {
     text-decoration: none;
     color: ${colors.beige};
@@ -91,6 +133,10 @@ export const Rating = styled.div`
   @media only screen and (max-width: 767px) {
     top: 227px;
   }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    top: 233px;
+  }
 `
 export const StarLogo = styled.div`
   position: relative;
@@ -102,8 +148,23 @@ export const StarLogo = styled.div`
     height: 21px;
   }
 
-  @media only screen and (max-width: 767px) {
+  @media only screen and (max-width: 500px) {
     top: -184px;
+    margin-left: 93%;
+  }
+
+  @media only screen and (min-width: 501px) and (max-width: 700px) {
+    top: -181px;
+    margin-left: 95%;
+  }
+
+  @media only screen and (min-width: 701px) and (max-width: 767px) {
+    top: -182px;
+    margin-left: 95%;
+  }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) {
+    top: -175px;
     margin-left: 93%;
   }
 `
