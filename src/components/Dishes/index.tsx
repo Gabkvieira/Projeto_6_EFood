@@ -12,7 +12,7 @@ type Props = {
   porcao?: string
 }
 
-const Pratos = ({ foto, id, nome, descricao, preco, porcao }: Props) => {
+const Dishes = ({ foto, id, nome, descricao, preco, porcao }: Props) => {
   const [isModalOpen, setIsModalOpen] = useState(false)
 
   const openModal = () => setIsModalOpen(true)
@@ -63,4 +63,4 @@ const Pratos = ({ foto, id, nome, descricao, preco, porcao }: Props) => {
   )
 }
 
-export default Pratos
+export default Dishes

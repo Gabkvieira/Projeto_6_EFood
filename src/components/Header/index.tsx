@@ -5,7 +5,7 @@ import { RootReducer } from '../../store'
 import { open } from '../../store/reducers/cart'
 import * as S from './styles'
 import logo from '../../assets/images/logo.svg'
-import fundo from '../../assets/images/fundo.png'
+import background from '../../assets/images/fundo.png'
 
 const Header = () => {
   const dispatch = useDispatch()
@@ -16,7 +16,7 @@ const Header = () => {
   }
 
   return (
-    <S.HeaderBar style={{ backgroundImage: `url(${fundo})` }}>
+    <S.HeaderBar style={{ backgroundImage: `url(${background})` }}>
       <div className="container">
         <nav>
           <S.Links>

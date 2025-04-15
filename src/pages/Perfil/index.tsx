@@ -23,8 +23,8 @@ const Perfil = () => {
   return (
     <>
       <Header />
-      <Banner restaurant={restaurant} />
-      <DishesList restaurant={restaurant} />
+      <Banner restaurants={restaurant} />
+      <DishesList restaurants={restaurant} />
     </>
   )
 }

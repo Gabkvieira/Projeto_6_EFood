@@ -4,11 +4,11 @@ import Dishes from '../Dishes'
 import * as S from './styles'
 
 export type Props = {
-  restaurant: Menu
+  restaurants: Menu
 }
 
-const DishesList = ({ restaurant }: Props) => {
-  const restaurantMenu = restaurant.cardapio
+const DishesList = ({ restaurants }: Props) => {
+  const restaurantMenu = restaurants.cardapio
 
   return (
     <S.Container>
