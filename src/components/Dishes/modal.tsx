@@ -101,6 +101,7 @@ const ImageContainer = styled.div`
       height: auto;
       width: 100%;
       border-radius: 8px;
+      margin-left: 0;
     }
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
@@ -112,10 +113,6 @@ const ImageContainer = styled.div`
     width: 100%;
     margin-left: -24px;
   }
-  }
-
-  @media only screen and (max-width: 767px) {
-    margin-left: 0;
   }
 }
 `

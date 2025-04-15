@@ -53,7 +53,7 @@ export const Card = styled.div`
   @media only screen and (min-width: 901px) and (max-width: 1023px) and (max-height: 500px) {
     width: 350px;
     height: 500px;
-    margin-left: 2%;
+    margin-left: 0;
   }
 
   @media only screen and (min-width: 1024px) and (max-width: 1200px) {
