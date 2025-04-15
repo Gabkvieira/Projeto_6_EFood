@@ -84,10 +84,6 @@ const ModalContent = styled.div`
   @media only screen and (max-width: 767px) {
     display: block;
   }
-
-  @media only screen and (min-width: 768px) and (max-width: 1023px) {
-    display: block;
-  }
 `
 
 const ImageContainer = styled.div`
@@ -101,18 +97,29 @@ const ImageContainer = styled.div`
       height: auto;
       width: 100%;
       border-radius: 8px;
-      margin-left: 0;
     }
 
   @media only screen and (min-width: 768px) and (max-width: 1023px) {
     width: 102%;
     margin-left: -25px;
+    border-radius: 8px;
   }
 
   @media only screen and (min-width: 1024px) and (max-width: 1200px) {
     width: 100%;
     margin-left: -24px;
+    border-radius: 8px;
   }
+
+  @media only screen and (min-width: 768px) and (max-width: 1023px) and (max-height: 500px) {
+    width: 100%;
+    margin-left: -24px;
+    border-radius: 8px;
+  }
+  }
+
+  @media only screen and (max-width: 767px) {
+    margin-left: 0;
   }
 }
 `
