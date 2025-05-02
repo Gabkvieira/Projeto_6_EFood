@@ -61,6 +61,15 @@ export const Prices = styled.p`
     right: 8px;
   }
 `
+
+export const Quantity = styled.p`
+  font-weight: 700;
+  font-size: 16px;
+  color: ${colors.beige};
+  margin-top: 32px;
+  margin-bottom: 16px;
+`
+
 export const CartItem = styled.li`
   background-color: ${colors.beige};
   display: flex;
@@ -136,4 +145,79 @@ export const EmptyCartMessage = styled.p`
   font-size: 16px;
   text-align: center;
   margin: 32px 0;
+`
+
+export const Title = styled.h2`
+  color: ${colors.beige};
+  font-size: 18px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  text-align: center;
+`
+
+export const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+`
+
+export const FormGroup = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+
+  label {
+    font-size: 14px;
+    font-weight: 700;
+    color: ${colors.beige};
+  }
+
+  input {
+    height: 40px;
+    padding: 0 12px;
+    border: none;
+    font-size: 14px;
+    width: 100%;
+
+    &:focus {
+      outline: 1px solid ${colors.beige};
+    }
+  }
+`
+
+export const InputGroup = styled.div`
+  display: flex;
+  gap: 12px;
+
+  @media (max-width: 480px) {
+    flex-direction: column;
+  }
+`
+
+export const ButtonContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 16px;
+`
+
+export const Button = styled.button`
+  background-color: ${colors.beige};
+  color: ${colors.salmon};
+  border: none;
+  font-size: 14px;
+  font-weight: 700;
+  padding: 12px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+
+  &:hover {
+    opacity: 0.8;
+  }
+
+  &:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+  }
 `
