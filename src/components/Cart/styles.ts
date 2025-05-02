@@ -2,6 +2,10 @@ import styled from 'styled-components'
 import { colors } from '../../styles'
 import closeIcon from '../../assets/images/lixeira.png'
 
+type FormGroupProps = {
+  maxWidth?: string
+}
+
 export const Overlay = styled.div`
   position: absolute;
   top: 0;
@@ -46,8 +50,20 @@ export const Sidebar = styled.aside`
     margin-bottom: 24px;
     text-align: center;
   }
-`
 
+  .order-info {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-bottom: 24px;
+
+    p {
+      font-size: 14px;
+      line-height: 1.5;
+      color: ${colors.beige};
+      text-align: justify;
+    }
+`
 export const Prices = styled.p`
   font-weight: 700;
   font-size: 14px;
@@ -60,14 +76,6 @@ export const Prices = styled.p`
     position: absolute;
     right: 8px;
   }
-`
-
-export const Quantity = styled.p`
-  font-weight: 700;
-  font-size: 16px;
-  color: ${colors.beige};
-  margin-top: 32px;
-  margin-bottom: 16px;
 `
 
 export const CartItem = styled.li`
@@ -147,11 +155,11 @@ export const EmptyCartMessage = styled.p`
   margin: 32px 0;
 `
 
-export const Title = styled.h2`
+export const Title = styled.p`
   color: ${colors.beige};
-  font-size: 18px;
+  font-size: 16px;
   font-weight: 700;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   text-align: center;
 `
 
@@ -161,7 +169,8 @@ export const Form = styled.form`
   gap: 16px;
 `
 
-export const FormGroup = styled.div`
+export const FormGroup = styled.div<FormGroupProps>`
+  max-width: ${(props) => props.maxWidth || 'auto'};
   display: flex;
   flex-direction: column;
   gap: 8px;
@@ -174,11 +183,13 @@ export const FormGroup = styled.div`
   }
 
   input {
-    height: 40px;
-    padding: 0 12px;
+    width: 344px;
+    height: 32px;
+    padding: 0 8px;
     border: none;
     font-size: 14px;
     width: 100%;
+    background-color: ${colors.beige};
 
     &:focus {
       outline: 1px solid ${colors.beige};
@@ -188,7 +199,7 @@ export const FormGroup = styled.div`
 
 export const InputGroup = styled.div`
   display: flex;
-  gap: 12px;
+  gap: 34px;
 
   @media (max-width: 480px) {
     flex-direction: column;
@@ -208,7 +219,8 @@ export const Button = styled.button`
   border: none;
   font-size: 14px;
   font-weight: 700;
-  padding: 12px;
+  width: 344px;
+  height: 24px;
   cursor: pointer;
   transition: opacity 0.2s;
 
@@ -219,5 +231,9 @@ export const Button = styled.button`
   &:disabled {
     opacity: 0.5;
     cursor: not-allowed;
+  }
+
+  @media only screen and (max-width: 767px) {
+    width: 100%;
   }
 `

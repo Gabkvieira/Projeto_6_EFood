@@ -1,28 +1,11 @@
 import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
+import InputMask from 'react-input-mask'
+
 import { RootReducer } from '../../store'
 import { close, remove, clear } from '../../store/reducers/cart'
 
-import {
-  Overlay,
-  CartContainer,
-  Sidebar,
-  Prices,
-  Quantity,
-  CartItem,
-  CartItemInfo,
-  CartItemTitle,
-  CartItemPrice,
-  RemoveButton,
-  CheckoutButton,
-  EmptyCartMessage,
-  FormGroup,
-  Form,
-  InputGroup,
-  Title,
-  ButtonContainer,
-  Button
-} from './styles'
+import * as S from './styles'
 
 type DeliveryFormData = {
   receiver: string
@@ -190,34 +173,33 @@ const Cart = () => {
     <>
       <h2>Carrinho</h2>
       {items.length === 0 ? (
-        <EmptyCartMessage>
+        <S.EmptyCartMessage>
           O carrinho está vazio. Adicione itens para continuar.
-        </EmptyCartMessage>
+        </S.EmptyCartMessage>
       ) : (
         <>
           <ul>
             {items.map((item) => (
-              <CartItem key={item.id}>
+              <S.CartItem key={item.id}>
                 <img src={item.foto} alt={item.nome} />
-                <CartItemInfo>
-                  <CartItemTitle>{item.nome}</CartItemTitle>
-                  <CartItemPrice>{formatPrice(item.preco)}</CartItemPrice>
-                </CartItemInfo>
-                <RemoveButton
+                <S.CartItemInfo>
+                  <S.CartItemTitle>{item.nome}</S.CartItemTitle>
+                  <S.CartItemPrice>{formatPrice(item.preco)}</S.CartItemPrice>
+                </S.CartItemInfo>
+                <S.RemoveButton
                   onClick={() => removeItem(item.id)}
                   type="button"
-                ></RemoveButton>
-              </CartItem>
+                ></S.RemoveButton>
+              </S.CartItem>
             ))}
           </ul>
-          <Quantity>{items.length} produto(s) no carrinho</Quantity>
-          <Prices>
-            Total: {formatPrice(getTotalPrice())}
-            <span>Entrega grátis</span>
-          </Prices>
-          <CheckoutButton onClick={handleProceedToDelivery}>
+          <S.Prices>
+            Valor total:
+            <span>{formatPrice(getTotalPrice())}</span>
+          </S.Prices>
+          <S.CheckoutButton onClick={handleProceedToDelivery}>
             Continuar com a entrega
-          </CheckoutButton>
+          </S.CheckoutButton>
         </>
       )}
     </>
@@ -225,9 +207,9 @@ const Cart = () => {
 
   const renderDeliveryForm = () => (
     <>
-      <Title>Entrega</Title>
-      <Form onSubmit={handleDeliverySubmit}>
-        <FormGroup>
+      <S.Title>Entrega</S.Title>
+      <S.Form onSubmit={handleDeliverySubmit}>
+        <S.FormGroup>
           <label htmlFor="receiver">Quem irá receber</label>
           <input
             id="receiver"
@@ -237,8 +219,8 @@ const Cart = () => {
             onChange={handleDeliveryInputChange}
             required
           />
-        </FormGroup>
-        <FormGroup>
+        </S.FormGroup>
+        <S.FormGroup>
           <label htmlFor="description">Endereço</label>
           <input
             id="description"
@@ -248,8 +230,8 @@ const Cart = () => {
             onChange={handleDeliveryInputChange}
             required
           />
-        </FormGroup>
-        <FormGroup>
+        </S.FormGroup>
+        <S.FormGroup>
           <label htmlFor="city">Cidade</label>
           <input
             id="city"
@@ -259,20 +241,21 @@ const Cart = () => {
             onChange={handleDeliveryInputChange}
             required
           />
-        </FormGroup>
-        <InputGroup>
-          <FormGroup>
+        </S.FormGroup>
+        <S.InputGroup>
+          <S.FormGroup maxWidth="155px">
             <label htmlFor="zipCode">CEP</label>
-            <input
+            <InputMask
               id="zipCode"
               name="zipCode"
               type="text"
               value={deliveryForm.zipCode}
               onChange={handleDeliveryInputChange}
               required
+              mask="99999-999"
             />
-          </FormGroup>
-          <FormGroup>
+          </S.FormGroup>
+          <S.FormGroup maxWidth="155px">
             <label htmlFor="number">Número</label>
             <input
               id="number"
@@ -282,9 +265,9 @@ const Cart = () => {
               onChange={handleDeliveryInputChange}
               required
             />
-          </FormGroup>
-        </InputGroup>
-        <FormGroup>
+          </S.FormGroup>
+        </S.InputGroup>
+        <S.FormGroup>
           <label htmlFor="complement">Complemento (opcional)</label>
           <input
             id="complement"
@@ -293,22 +276,24 @@ const Cart = () => {
             value={deliveryForm.complement}
             onChange={handleDeliveryInputChange}
           />
-        </FormGroup>
-        <ButtonContainer>
-          <Button type="submit">Continuar com o pagamento </Button>
-          <Button type="button" onClick={handleBackToCart}>
+        </S.FormGroup>
+        <S.ButtonContainer>
+          <S.Button type="submit">Continuar com o pagamento </S.Button>
+          <S.Button type="button" onClick={handleBackToCart}>
             Voltar para o carrinho
-          </Button>
-        </ButtonContainer>
-      </Form>
+          </S.Button>
+        </S.ButtonContainer>
+      </S.Form>
     </>
   )
 
   const renderPaymentForm = () => (
     <>
-      <Title>Pagamento - Valor a pagar: {formatPrice(getTotalPrice())}</Title>
-      <Form onSubmit={handlePaymentSubmit}>
-        <FormGroup>
+      <S.Title>
+        Pagamento - Valor a pagar: {formatPrice(getTotalPrice())}
+      </S.Title>
+      <S.Form onSubmit={handlePaymentSubmit}>
+        <S.FormGroup>
           <label htmlFor="cardName">Nome no cartão</label>
           <input
             id="cardName"
@@ -318,73 +303,74 @@ const Cart = () => {
             onChange={handlePaymentInputChange}
             required
           />
-        </FormGroup>
-        <InputGroup>
-          <FormGroup>
+        </S.FormGroup>
+        <S.InputGroup>
+          <S.FormGroup maxWidth="228px">
             <label htmlFor="cardNumber">Número do cartão</label>
-            <input
+            <InputMask
               id="cardNumber"
               name="cardNumber"
               type="text"
               value={paymentForm.cardNumber}
               onChange={handlePaymentInputChange}
               required
+              mask="9999 9999 9999 9999"
             />
-          </FormGroup>
-          <FormGroup>
+          </S.FormGroup>
+          <S.FormGroup maxWidth="87px">
             <label htmlFor="cardCode">CVV</label>
-            <input
+            <InputMask
               id="cardCode"
               name="cardCode"
               type="text"
-              maxLength={3}
               value={paymentForm.cardCode}
               onChange={handlePaymentInputChange}
               required
+              mask="999"
             />
-          </FormGroup>
-        </InputGroup>
-        <InputGroup>
-          <FormGroup>
+          </S.FormGroup>
+        </S.InputGroup>
+        <S.InputGroup>
+          <S.FormGroup maxWidth="155px">
             <label htmlFor="expirationMonth">Mês de vencimento</label>
-            <input
+            <InputMask
               id="expirationMonth"
               name="expirationMonth"
               type="text"
-              maxLength={2}
               value={paymentForm.expirationMonth}
               onChange={handlePaymentInputChange}
               required
+              mask="99"
             />
-          </FormGroup>
-          <FormGroup>
+          </S.FormGroup>
+          <S.FormGroup maxWidth="155px">
             <label htmlFor="expirationYear">Ano de vencimento</label>
-            <input
+            <InputMask
               id="expirationYear"
               name="expirationYear"
               type="text"
-              maxLength={4}
               value={paymentForm.expirationYear}
               onChange={handlePaymentInputChange}
               required
+              mask="99"
             />
-          </FormGroup>
-        </InputGroup>
-        <ButtonContainer>
-          <Button type="submit" disabled={isLoading}>
+          </S.FormGroup>
+        </S.InputGroup>
+        <S.ButtonContainer>
+          <S.Button type="submit" disabled={isLoading}>
             {isLoading ? 'Finalizando pedido...' : 'Finalizar pagamento'}
-          </Button>
-          <Button type="button" onClick={handleBackToDelivery}>
+          </S.Button>
+          <S.Button type="button" onClick={handleBackToDelivery}>
             Voltar para a edição de endereço
-          </Button>
-        </ButtonContainer>
-      </Form>
+          </S.Button>
+        </S.ButtonContainer>
+      </S.Form>
     </>
   )
 
   const renderConfirmation = () => (
     <>
-      <Title>Pedido realizado - {orderData?.orderId}</Title>
+      <S.Title>Pedido realizado - {orderData?.orderId}</S.Title>
       <div className="order-info">
         <p>
           Estamos felizes em informar que seu pedido já está em processo de
@@ -392,33 +378,33 @@ const Cart = () => {
         </p>
         <p>
           Gostaríamos de ressaltar que nossos entregadores não estão autorizados
-          a fazer sexo com os clientes.
+          a realizar cobranças extras.
         </p>
         <p>
-          Lembre-se da importância de higienizar o pipi após o recebimento do
+          Lembre-se da importância de higienizar as mãos após o recebimento do
           pedido, garantindo assim sua segurança e bem-estar durante a refeição.
         </p>
         <p>
-          Esperamos que desfrute de uma deliciosa e agradável mamada
+          Esperamos que desfrute de uma deliciosa e agradável experiência
           gastronômica. Bom apetite!
         </p>
       </div>
-      <ButtonContainer>
-        <Button onClick={handleFinishOrder}>Concluir</Button>
-      </ButtonContainer>
+      <S.ButtonContainer>
+        <S.Button onClick={handleFinishOrder}>Concluir</S.Button>
+      </S.ButtonContainer>
     </>
   )
 
   return (
-    <CartContainer className={isOpen ? 'is-open' : ''}>
-      <Overlay onClick={closeCart} />
-      <Sidebar>
+    <S.CartContainer className={isOpen ? 'is-open' : ''}>
+      <S.Overlay onClick={closeCart} />
+      <S.Sidebar>
         {currentStep === 'cart' && renderCartContent()}
         {currentStep === 'delivery' && renderDeliveryForm()}
         {currentStep === 'payment' && renderPaymentForm()}
         {currentStep === 'confirmation' && renderConfirmation()}
-      </Sidebar>
-    </CartContainer>
+      </S.Sidebar>
+    </S.CartContainer>
   )
 }
 
