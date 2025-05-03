@@ -6,6 +6,10 @@ export const HeaderBar = styled.header`
   text-align: center;
   height: 186px;
 
+  @media only screen and (min-height: 1480px) and (max-height: 1920px) {
+    height: 250px;
+  }
+
   @media only screen and (max-width: 767px) {
     width: 100%;
   }
@@ -21,6 +25,10 @@ export const Links = styled.ul`
   margin-top: 82px;
   align-items: center;
   margin-left: -80px;
+
+  @media only screen and (min-height: 1480px) and (max-height: 1920px) {
+    margin-top: 100px;
+  }
 
   @media only screen and (min-width: 1024px) and (max-width: 1200px) {
     margin-left: -60px;

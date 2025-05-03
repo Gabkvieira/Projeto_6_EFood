@@ -5,6 +5,10 @@ export const Container = styled.footer`
   font-size: 10px;
   margin-top: 120px;
 
+  @media only screen and (min-height: 1480px) and (max-width: 1920px) {
+    margin-top: 160px;
+  }
+
     .container {
     width: 100%;
     display: flex;
@@ -23,6 +27,10 @@ export const Container = styled.footer`
   .logo {
     img {
       margin-top: 40px;
+
+    @media only screen and (min-height: 1480px) and (max-width: 1920px) {
+      margin-top: 60px;
+      }
     }
   }
 `
@@ -33,6 +41,9 @@ export const Links = styled.ul`
   li {
     margin-top: 32.5px;
     margin-bottom: 80px;
+
+    @media only screen and (min-height: 1480px) and (max-width: 1920px) {
+    margin-top: 60px;
   }
 `
 

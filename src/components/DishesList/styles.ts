@@ -12,6 +12,10 @@ export const List = styled.ul`
   column-gap: 32px;
   margin-top: 40px;
 
+  @media only screen and (min-height: 1480px) and (max-width: 1920px) {
+    margin-top: 80px;
+  }
+
   @media only screen and (max-width: 767px) {
     grid-template-columns: 1fr;
   }
