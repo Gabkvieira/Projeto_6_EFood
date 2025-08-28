@@ -12,7 +12,7 @@ const Perfil = () => {
   const [restaurant, setRestaurant] = useState<Menu>()
 
   useEffect(() => {
-    fetch('https://fake-api-tau.vercel.app/api/efood/restaurantes')
+    fetch('https://ebac-fake-api.vercel.app/api/efood/restaurantes')
       .then((res) => res.json())
       .then((res) =>
         setRestaurant(res.filter((item: Menu) => item.id === Number(id))[0])
